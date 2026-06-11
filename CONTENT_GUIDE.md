@@ -76,6 +76,30 @@ Alt text should describe the actual image and include the place when useful.
 
 Do not use competitor photos or social media photos without permission.
 
+## Room Photo Shot List
+
+Budget and value-minded lodging visitors inspect room photos closely. Before
+launch, prioritize honest, well-lit photos over decorative scenery:
+
+- exterior arrival view
+- bed from the doorway
+- bed from the opposite corner
+- bathroom sink/shower/toilet
+- refrigerator / TV / storage corner
+- pet-friendly room example, if different
+- parking or check-in/office view
+
+Avoid over-editing. The goal is “tidy, cared-for, and accurate,” not luxury.
+
+## Trust Proof
+
+Add verified proof as soon as ownership can provide it:
+
+- Google rating and review count
+- two or three short guest quotes
+- current direct-booking or cancellation reassurance
+- “Rooms from $99” placement near the top of the page and near room CTAs
+
 ## FAQ
 
 The vendor FAQ document supplied the question list. Before final launch, confirm owner-approved answers for:

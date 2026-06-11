@@ -121,7 +121,7 @@ export default function HomePage() {
           />
           <div className="card-grid">
             {experiences.slice(0, 6).map((item) => (
-              <ExperienceCard key={item.slug} item={item} />
+              <ExperienceCard key={item.slug} item={item} compact />
             ))}
           </div>
           <div className="section-actions">

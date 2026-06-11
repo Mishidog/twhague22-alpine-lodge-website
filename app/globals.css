@@ -398,6 +398,20 @@ p {
   padding: 22px;
 }
 
+.experience-card-compact .card-image {
+  min-height: 180px;
+}
+
+.experience-card-compact .card-body {
+  gap: 10px;
+  padding: 18px;
+}
+
+.experience-card-compact .meta-row {
+  padding-top: 2px;
+  font-size: 0.88rem;
+}
+
 .card-body p:not(.eyebrow),
 .guide-card p:not(.eyebrow),
 .guide-list-card p:not(.eyebrow),
@@ -1457,6 +1471,10 @@ p {
 
   .guide-card {
     min-height: 330px;
+  }
+
+  .experience-card-compact .card-image {
+    min-height: 170px;
   }
 
   .booking-note {
