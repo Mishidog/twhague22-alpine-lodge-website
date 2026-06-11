@@ -76,7 +76,7 @@ export default async function ExperienceDetailPage({ params }) {
               <strong>{item.distance}</strong>
             </div>
             <div className="fact-box">
-              <span>Budget</span>
+              <span>Cost level</span>
               <strong>{item.budget}</strong>
             </div>
             <div className="fact-box">

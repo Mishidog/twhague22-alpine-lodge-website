@@ -15,7 +15,7 @@ export default function TripGuidesPage() {
   return (
     <>
       <PageHero
-        eyebrow="Budget-friendly trip guides"
+        eyebrow="Practical trip guides"
         title="A better mountain weekend starts with a clearer plan."
         copy="Use these guides to plan the trip before you book: what to do, where to go, what to check, and how Alpine Lodge keeps lodging practical."
         image="/images/alpine-lodge-local-view.jpg"

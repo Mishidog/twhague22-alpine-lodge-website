@@ -97,3 +97,15 @@ The vendor FAQ document supplied the question list. Before final launch, confirm
 - smoking policy
 - group discounts
 
+## Price Anchor
+
+The homepage includes a rate-clarity panel. If Alpine Lodge ownership confirms
+a reliable starting rate or seasonal range, update `rateSignal` in `data/site.js`
+with a stronger proof point such as:
+
+```txt
+Rooms from $X on select dates
+```
+
+Do not invent rate comparisons like “half the cost of resort lodging” unless
+ownership can substantiate the claim.

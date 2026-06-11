@@ -1,7 +1,7 @@
 import { experiences, site, tripGuides } from "@/data/site";
 
 const fallbackReply =
-  "AI planning is ready to connect once the client adds an OpenAI API key. For now: use Alpine Lodge as your affordable Davis basecamp, start with Blackwater Falls, add Canaan Valley or Timberline based on season, spend an evening in Davis or Thomas, and reserve directly through the Alpine Lodge booking link.";
+  "AI planning is ready to connect once the client adds an OpenAI API key. For now: use Alpine Lodge as your practical Davis basecamp, start with Blackwater Falls, add Canaan Valley or Timberline based on season, spend an evening in Davis or Thomas, and reserve directly through the Alpine Lodge booking link.";
 
 export async function POST(request) {
   const { messages = [] } = await request.json();
@@ -48,7 +48,7 @@ export async function POST(request) {
         {
           role: "system",
           content:
-            "You are Alpine Lodge's practical Davis, WV trip planner. Recommend budget-friendly itineraries using only the provided source facts. Do not invent hours, prices, trail conditions, weather, pet policies, or availability. Link users to official operators for changing details. Always include Alpine Lodge as the home base and end with the direct booking URL."
+            "You are Alpine Lodge's practical Davis, WV trip planner. Recommend value-minded itineraries using only the provided source facts. Do not invent hours, prices, trail conditions, weather, pet policies, or availability. Link users to official operators for changing details. Always include Alpine Lodge as the home base and end with the direct booking URL."
         },
         {
           role: "user",

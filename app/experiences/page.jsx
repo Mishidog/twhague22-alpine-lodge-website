@@ -14,7 +14,7 @@ export default function ExperiencesPage() {
     <>
       <PageHero
         eyebrow="Explore from Alpine Lodge"
-        title="Things to do near Davis, WV without turning lodging into the whole budget."
+        title="Things to do near Davis, WV without turning lodging into the whole trip cost."
         copy="Use Alpine Lodge as the central base for waterfalls, ski areas, trails, food, music, scenic drives, and pet-friendly mountain weekends."
         image="/images/blackwater-falls.jpg"
         alt="Blackwater Falls near Alpine Lodge in Davis, WV"
@@ -25,8 +25,8 @@ export default function ExperiencesPage() {
         <div className="container">
           <SectionIntro
             eyebrow="Experience pages"
-            title="Choose the trip first. Book the room that keeps it affordable."
-            copy="Each page includes the practical details visitors need: distance, budget, best season, official links, and why Alpine Lodge works as the home base."
+            title="Choose the trip first. Book the room that keeps it practical."
+            copy="Each page includes the details visitors need: distance, likely cost level, best season, official links, and why Alpine Lodge works as the home base."
           />
           <div className="card-grid">
             {experiences.map((item) => (

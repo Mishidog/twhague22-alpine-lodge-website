@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Send, Sparkles } from "lucide-react";
 
 const starters = [
-  "Plan a two-night budget weekend with waterfalls and good food.",
+  "Plan a two-night value-minded weekend with waterfalls and good food.",
   "We are coming for skiing and want to keep lodging costs down.",
   "What can we do with a dog near Davis, WV?",
   "Give me a rainy-day plan around Davis and Thomas."
@@ -56,7 +56,7 @@ export function TripPlanner() {
     <div className="planner-shell">
       <div className="planner-sidebar">
         <p className="eyebrow">Try a prompt</p>
-        <h2>Build a trip around your budget.</h2>
+        <h2>Build a trip around your priorities.</h2>
         <div className="starter-stack">
           {starters.map((starter) => (
             <button key={starter} type="button" onClick={() => sendMessage(starter)}>

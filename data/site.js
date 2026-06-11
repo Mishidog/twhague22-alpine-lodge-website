@@ -34,17 +34,26 @@ export const nav = [
 
 export const highlights = [
   "Davis, WV location",
-  "Budget-friendly rooms",
+  "Fair-priced rooms",
   "Pet-friendly rooms available",
   "Wi-Fi, refrigerator, private bath",
   "Minutes from waterfalls, ski areas, trails, food, and music"
 ];
+
+export const rateSignal = {
+  eyebrow: "Rate clarity",
+  headline: "Live room rates are shown before you reserve.",
+  body:
+    "Rates can shift by season and availability, so the direct booking page shows current room options before you commit. If ownership confirms a starting rate, this panel can become a stronger “rooms from $X” proof point.",
+  cta: "Check Live Rates"
+};
 
 export const rooms = [
   {
     title: "Simple Rooms For Mountain Trips",
     image: "/images/alpine-lodge-room.jpg",
     alt: "A guest room at Alpine Lodge in Davis, West Virginia",
+    caption: "Where you crash after Dolly Sods, ski laps, waterfall walks, and late dinner in Davis.",
     description:
       "A practical place to land after a day outside, with the basics travelers actually use: private bathroom, refrigerator, flat-screen TV, Wi-Fi, and easy access to Davis."
   },
@@ -52,6 +61,7 @@ export const rooms = [
     title: "Pet-Friendly Options",
     image: "/images/alpine-lodge-exterior.jpg",
     alt: "Alpine Lodge exterior in Davis, West Virginia",
+    caption: "A simple Davis landing spot when the dog is part of the road trip.",
     description:
       "Designated pet-friendly rooms help make Alpine Lodge a useful home base for visitors traveling with dogs. Confirm availability when booking."
   },
@@ -59,6 +69,7 @@ export const rooms = [
     title: "Close To The Whole Weekend",
     image: "/images/alpine-lodge-property.jpeg",
     alt: "Alpine Lodge property near Davis attractions",
+    caption: "Park here, sleep here, then point the day toward waterfalls, snow, trails, food, or music.",
     description:
       "Spend less time driving across the region and more time enjoying Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, and downtown Davis."
   }
@@ -115,7 +126,7 @@ export const experiences = [
     eyebrow: "Waterfalls & state park days",
     seoTitle: "Lodging Near Blackwater Falls State Park | Alpine Lodge Davis WV",
     description:
-      "Stay minutes from Blackwater Falls State Park at Alpine Lodge, a budget-friendly Davis, WV basecamp for waterfalls, overlooks, trails, and scenic drives.",
+      "Stay minutes from Blackwater Falls State Park at Alpine Lodge, a practical Davis, WV basecamp for waterfalls, overlooks, trails, and scenic drives.",
     image: "/images/blackwater-falls.jpg",
     alt: "Blackwater Falls near Davis, West Virginia",
     distance: "about 5 minutes from Alpine Lodge",
@@ -125,7 +136,7 @@ export const experiences = [
     officialLink: "https://wvstateparks.com/parks/blackwater-falls-state-park/",
     body: [
       "Blackwater Falls is one of the easiest big wins from Alpine Lodge. You can check in, drop your bags, and be at the park quickly for the falls boardwalk, overlooks, trails, and classic West Virginia views.",
-      "It is a strong choice for travelers who want a memorable outdoor day without turning the whole trip into a high-cost resort stay. Use Alpine Lodge as the affordable room and put the rest of the budget toward food, fuel, gear, and extra exploring."
+      "It is a strong choice for travelers who want a memorable outdoor day without turning the whole trip into a high-cost resort stay. Use Alpine Lodge as the simple room and put the rest of the trip spend toward food, fuel, gear, and extra exploring."
     ],
     tips: [
       "Go early or late for easier parking and softer light.",
@@ -139,7 +150,7 @@ export const experiences = [
     eyebrow: "Four-season recreation",
     seoTitle: "Affordable Lodging Near Canaan Valley WV | Alpine Lodge",
     description:
-      "Use Alpine Lodge in Davis as a budget-friendly base for Canaan Valley hiking, skiing, tubing, wildlife viewing, scenic drives, and resort activities.",
+      "Use Alpine Lodge in Davis as a fair-priced base for Canaan Valley hiking, skiing, tubing, wildlife viewing, scenic drives, and resort activities.",
     image: "/images/fly-fishing-blackwater-river.jpg",
     alt: "Fly fishing and mountain scenery near Davis and Canaan Valley",
     distance: "about 15 minutes from Alpine Lodge",
@@ -163,7 +174,7 @@ export const experiences = [
     eyebrow: "Downhill ski weekends",
     seoTitle: "Lodging Near Timberline Mountain | Budget Hotel in Davis WV",
     description:
-      "Stay at Alpine Lodge in Davis for affordable lodging near Timberline Mountain skiing, snowboarding, lift-served mountain days, and winter weekends.",
+      "Stay at Alpine Lodge in Davis for practical lodging near Timberline Mountain skiing, snowboarding, lift-served mountain days, and winter weekends.",
     image: "/images/alpine-lodge-local-view.jpg",
     alt: "Mountain view near Alpine Lodge in Davis, West Virginia",
     distance: "about 20 minutes from Alpine Lodge",
@@ -173,7 +184,7 @@ export const experiences = [
     officialLink: "https://www.timberlinemountain.com/",
     body: [
       "Timberline Mountain is a major reason people come to the Davis and Canaan Valley area in winter. Alpine Lodge gives skiers and snowboarders a practical place to sleep without making the lodging the expensive part of the trip.",
-      "It is especially useful for groups and budget-conscious visitors who plan to be out on the mountain all day and want a simple room nearby at night."
+      "It is especially useful for groups and value-minded visitors who plan to be out on the mountain all day and want a simple room nearby at night."
     ],
     tips: [
       "Reserve early for winter weekends and holiday periods.",
@@ -187,11 +198,11 @@ export const experiences = [
     eyebrow: "Nordic skiing & snowshoeing",
     seoTitle: "Lodging Near White Grass Ski Touring Center | Alpine Lodge",
     description:
-      "Plan a cross-country ski or snowshoe weekend near White Grass with Alpine Lodge as your affordable Davis, WV home base.",
+      "Plan a cross-country ski or snowshoe weekend near White Grass with Alpine Lodge as your Davis, WV home base.",
     image: "/images/blackwater-falls.jpg",
     alt: "Snow and waterfall scenery near Davis, West Virginia",
     distance: "about 20 minutes from Alpine Lodge",
-    budget: "Affordable winter adventure",
+    budget: "Fair-priced winter adventure",
     bestFor: ["cross-country skiing", "snowshoeing", "couples", "quiet weekends"],
     season: "Winter snow conditions",
     officialLink: "https://whitegrass.com/",
@@ -211,7 +222,7 @@ export const experiences = [
     eyebrow: "Big views & wild terrain",
     seoTitle: "Dolly Sods Weekend Lodging Near Davis WV | Alpine Lodge",
     description:
-      "Make Alpine Lodge your Davis base for a Dolly Sods weekend with hiking, scenic drives, big views, and budget-friendly lodging nearby.",
+      "Make Alpine Lodge your Davis base for a Dolly Sods weekend with hiking, scenic drives, big views, and practical lodging nearby.",
     image: "/images/downtown-davis-wv.jpeg",
     alt: "Downtown Davis, West Virginia near Alpine Lodge",
     distance: "drive times vary by trailhead and road conditions",
@@ -236,7 +247,7 @@ export const experiences = [
     eyebrow: "Small-town nights out",
     seoTitle: "Stay Near Thomas WV Music, Food & The Purple Fiddle | Alpine Lodge",
     description:
-      "Stay in nearby Davis at Alpine Lodge for an affordable weekend close to Thomas, WV music, galleries, restaurants, shops, and nightlife.",
+      "Stay in nearby Davis at Alpine Lodge for a fair-priced weekend close to Thomas, WV music, galleries, restaurants, shops, and nightlife.",
     image: "/images/downtown-davis-wv.jpeg",
     alt: "Historic downtown Davis near Thomas, West Virginia",
     distance: "about 10 minutes from Alpine Lodge",
@@ -246,7 +257,7 @@ export const experiences = [
     officialLink: "https://purplefiddle.com/",
     body: [
       "A Davis weekend is not only about trails and waterfalls. Thomas adds music, food, galleries, and a small-town evening scene that turns a simple overnight stay into a real getaway.",
-      "Book Alpine Lodge as the affordable room, then spend the evening budget on dinner, drinks, music, and local shops."
+      "Book Alpine Lodge as the simple room, then spend the evening on dinner, drinks, music, and local shops."
     ],
     tips: [
       "Check show calendars before booking your dates.",
@@ -260,7 +271,7 @@ export const experiences = [
     eyebrow: "Trails close to town",
     seoTitle: "Hiking Near Davis WV | Budget Lodging at Alpine Lodge",
     description:
-      "Find budget-friendly lodging near Davis, WV hiking, Blackwater Falls trails, Canaan Valley paths, Dolly Sods, and Monongahela National Forest.",
+      "Find practical lodging near Davis, WV hiking, Blackwater Falls trails, Canaan Valley paths, Dolly Sods, and Monongahela National Forest.",
     image: "/images/fly-fishing-blackwater-river.jpg",
     alt: "Outdoor recreation near Davis, West Virginia",
     distance: "trail options from minutes away to longer scenic drives",

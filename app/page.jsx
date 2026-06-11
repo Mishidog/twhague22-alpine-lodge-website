@@ -15,7 +15,7 @@ import { BookingButton, SecondaryLink } from "@/components/BookingButton";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { JsonLd } from "@/components/JsonLd";
 import { SectionIntro } from "@/components/SectionIntro";
-import { distances, experiences, faqs, highlights, rooms, site, tripGuides } from "@/data/site";
+import { distances, experiences, faqs, highlights, rateSignal, rooms, site, tripGuides } from "@/data/site";
 
 export const metadata = {
   title: "Affordable Davis WV Lodging Near Blackwater Falls & Canaan Valley",
@@ -59,8 +59,8 @@ export default function HomePage() {
         />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="eyebrow">Budget-friendly lodging in Davis, West Virginia</p>
-          <h1>Your affordable basecamp for Blackwater Falls, Canaan Valley, Timberline & Thomas.</h1>
+          <p className="eyebrow">Fair-priced lodging in Davis, West Virginia</p>
+          <h1>Your Davis basecamp for Blackwater Falls, Canaan Valley, Timberline & Thomas.</h1>
           <p>
             Alpine Lodge keeps the stay simple, central, and practical so you can
             spend the trip on waterfalls, trails, skiing, food, music, and mountain days.
@@ -100,12 +100,12 @@ export default function HomePage() {
           <div className="prose">
             <p>
               The best reason to stay here is not a lobby you never use. It is the
-              location. Alpine Lodge puts budget-conscious travelers close to the
+              location. Alpine Lodge puts value-minded travelers close to the
               Davis and Canaan Valley experiences they came for.
             </p>
             <p>
               Sleep comfortably, keep the plan flexible, and use the rest of the
-              travel budget for lift tickets, local food, gear, music, gas, and one
+              trip spend for lift tickets, local food, gear, music, gas, and one
               more stop before heading home.
             </p>
           </div>
@@ -117,7 +117,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Explore from Alpine Lodge"
             title="One room. A whole weekend of options."
-            copy="Plan around the season, your budget, and the kind of trip you want: waterfalls, ski days, hiking, biking, music, food, pets, or a little of everything."
+            copy="Plan around the season, your spend, and the kind of trip you want: waterfalls, ski days, hiking, biking, music, food, pets, or a little of everything."
           />
           <div className="card-grid">
             {experiences.slice(0, 6).map((item) => (
@@ -159,6 +159,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section section-muted">
+        <div className="container hub-map-section">
+          <div>
+            <p className="eyebrow">The center-point advantage</p>
+            <h2>Alpine Lodge sits in the middle of the trip, not off to the side.</h2>
+            <p>
+              Davis works because the weekend can go in several directions without
+              changing hotels: waterfall morning, valley afternoon, dinner in town,
+              or a ski day when the snow is right.
+            </p>
+          </div>
+          <div className="hub-map" aria-label="Alpine Lodge hub map">
+            <span className="hub-center">Alpine Lodge<br />Davis, WV</span>
+            <span className="hub-node node-one">Blackwater Falls<br /><em>~5 min</em></span>
+            <span className="hub-node node-two">Thomas<br /><em>~10 min</em></span>
+            <span className="hub-node node-three">Canaan Valley<br /><em>~15 min</em></span>
+            <span className="hub-node node-four">Timberline<br /><em>~20 min</em></span>
+            <span className="hub-node node-five">White Grass<br /><em>~20 min</em></span>
+            <span className="hub-node node-six">Dolly Sods<br /><em>Plan ahead</em></span>
+          </div>
+        </div>
+      </section>
+
       <section className="section section-dark">
         <div className="container rooms-strip">
           <div>
@@ -174,7 +197,7 @@ export default function HomePage() {
             {rooms.map((room) => (
               <div key={room.title} className="room-preview">
                 <Image src={room.image} alt={room.alt} fill sizes="(max-width: 900px) 100vw, 20vw" />
-                <span>{room.title}</span>
+                <span>{room.caption}</span>
               </div>
             ))}
           </div>
@@ -182,9 +205,20 @@ export default function HomePage() {
       </section>
 
       <section className="section">
+        <div className="container rate-panel">
+          <div>
+            <p className="eyebrow">{rateSignal.eyebrow}</p>
+            <h2>{rateSignal.headline}</h2>
+            <p>{rateSignal.body}</p>
+          </div>
+          <BookingButton>{rateSignal.cta}</BookingButton>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <SectionIntro
-            eyebrow="Budget trip guides"
+            eyebrow="Practical trip guides"
             title="Plans visitors can use before they ever call."
             copy="These guides are written for the likely Alpine guest: someone who wants the mountains, a fair room, and a weekend that feels worth the drive."
           />
@@ -210,7 +244,7 @@ export default function HomePage() {
             <h2>Know what to expect before you arrive.</h2>
             <p>
               Clear details about pets, check-in, Wi-Fi, ski access, local food,
-              and booking help budget travelers feel safe choosing Alpine Lodge.
+              and booking help travelers feel confident choosing Alpine Lodge.
             </p>
           </div>
           <div className="faq-list compact-faq">

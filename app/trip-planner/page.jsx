@@ -4,7 +4,7 @@ import { BookingButton } from "@/components/BookingButton";
 export const metadata = {
   title: "Davis WV Trip Planner",
   description:
-    "Plan a budget-friendly Davis, WV trip with Alpine Lodge as your home base for Blackwater Falls, Canaan Valley, Timberline Mountain, Thomas, hiking, skiing, food, and music."
+    "Plan a practical Davis, WV trip with Alpine Lodge as your home base for Blackwater Falls, Canaan Valley, Timberline Mountain, Thomas, hiking, skiing, food, and music."
 };
 
 export default function TripPlannerPage() {
