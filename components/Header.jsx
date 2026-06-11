@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
-import { nav, site } from "@/data/site";
+import { nav, rateSignal, site } from "@/data/site";
 import { BookingButton } from "./BookingButton";
 
 export function Header() {
@@ -31,7 +31,13 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <BookingButton compact />
+        <div className="header-actions">
+          <span className="rate-badge" aria-label="Rooms from 99 dollars on select dates">
+            <strong>{rateSignal.eyebrow}</strong>
+            <em>Select dates</em>
+          </span>
+          <BookingButton compact />
+        </div>
       </div>
     </header>
   );
