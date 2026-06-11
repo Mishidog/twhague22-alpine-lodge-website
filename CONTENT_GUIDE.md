@@ -99,13 +99,12 @@ The vendor FAQ document supplied the question list. Before final launch, confirm
 
 ## Price Anchor
 
-The homepage includes a rate-clarity panel. If Alpine Lodge ownership confirms
-a reliable starting rate or seasonal range, update `rateSignal` in `data/site.js`
-with a stronger proof point such as:
+The homepage includes a rate-clarity panel currently using:
 
 ```txt
-Rooms from $X on select dates
+Rooms from $99
 ```
 
+Keep the wording qualified because rates can shift by season and availability.
 Do not invent rate comparisons like “half the cost of resort lodging” unless
 ownership can substantiate the claim.

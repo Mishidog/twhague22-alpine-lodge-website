@@ -41,10 +41,10 @@ export const highlights = [
 ];
 
 export const rateSignal = {
-  eyebrow: "Rate clarity",
-  headline: "Live room rates are shown before you reserve.",
+  eyebrow: "Rooms from $99",
+  headline: "A fair-priced Davis stay, with live rates shown before you reserve.",
   body:
-    "Rates can shift by season and availability, so the direct booking page shows current room options before you commit. If ownership confirms a starting rate, this panel can become a stronger “rooms from $X” proof point.",
+    "Select rooms start from $99. Rates can shift by season and availability, so the direct booking page shows current room options before you commit.",
   cta: "Check Live Rates"
 };
 
