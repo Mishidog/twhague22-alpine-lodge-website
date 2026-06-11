@@ -76,6 +76,12 @@ Alt text should describe the actual image and include the place when useful.
 
 Do not use competitor photos or social media photos without permission.
 
+Priority replacements before launch:
+
+- White Grass: use an owner-approved photo, a White Grass-provided image with permission, or a properly licensed snowy Nordic trail photo.
+- Dolly Sods: use a properly licensed wilderness/view photo. Wikimedia Commons has licensed options, but any image used must keep the required attribution in `IMAGE_CREDITS.md`.
+- Alpine Lodge rooms: add more honest room photos before paid traffic or heavy SEO promotion.
+
 ## Room Photo Shot List
 
 Budget and value-minded lodging visitors inspect room photos closely. Before
@@ -99,6 +105,25 @@ Add verified proof as soon as ownership can provide it:
 - two or three short guest quotes
 - current direct-booking or cancellation reassurance
 - “Rooms from $99” placement near the top of the page and near room CTAs
+
+Do not invent reviews. When adding quotes to `guestQuotes` in `data/site.js`,
+use short verified snippets from Google, TripAdvisor, Booking.com, or another
+approved source. Keep the exact quote short, note the source internally, and
+avoid publishing a guest's full name unless the source clearly displays it.
+
+## Pet-Friendly Copy
+
+The homepage now gives pet-friendly rooms their own callout. If ownership has a
+confirmed pet fee, add it directly to the pet callout, FAQ, and pet-friendly
+experience page. If the fee can change, keep the wording qualified and point
+visitors to direct booking or a phone call.
+
+## Technical SEO
+
+The site includes Hotel / LodgingBusiness / LocalBusiness structured data in
+`data/site.js`. Keep the address, phone, booking link, amenities, check-in, and
+check-out details owner-approved because search engines can read that data
+directly.
 
 ## FAQ
 

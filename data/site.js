@@ -45,8 +45,11 @@ export const rateSignal = {
   headline: "A fair-priced Davis stay, with live rates shown before you reserve.",
   body:
     "Select rooms start from $99. Rates can shift by season and availability, so the direct booking page shows current room options before you commit.",
-  cta: "Check Live Rates"
+  cta: "Check Live Rates",
+  headerNote: "Book direct"
 };
+
+export const guestQuotes = [];
 
 export const rooms = [
   {
@@ -84,6 +87,39 @@ export const amenities = [
   "Designated pet-friendly rooms",
   "Easy access to Davis and nearby attractions",
   "Direct Cloudbeds reservations"
+];
+
+export const amenityHighlights = [
+  {
+    title: "Free Wi-Fi",
+    detail: "Stay connected after the day outside.",
+    icon: "wifi"
+  },
+  {
+    title: "Private bath",
+    detail: "Every room has its own bathroom.",
+    icon: "bath"
+  },
+  {
+    title: "In-room refrigerator",
+    detail: "Keep drinks, leftovers, and trail snacks cold.",
+    icon: "refrigerator"
+  },
+  {
+    title: "Flat-screen TV",
+    detail: "Easy reset time after waterfalls, trails, or ski laps.",
+    icon: "tv"
+  },
+  {
+    title: "Pet-friendly rooms",
+    detail: "Designated rooms are available; confirm current policy when booking.",
+    icon: "paw"
+  },
+  {
+    title: "Direct reservations",
+    detail: "Live rates and room options through Alpine Lodge booking.",
+    icon: "booking"
+  }
 ];
 
 export const distances = [
@@ -199,8 +235,8 @@ export const experiences = [
     seoTitle: "Lodging Near White Grass Ski Touring Center | Alpine Lodge",
     description:
       "Plan a cross-country ski or snowshoe weekend near White Grass with Alpine Lodge as your Davis, WV home base.",
-    image: "/images/blackwater-falls.jpg",
-    alt: "Snow and waterfall scenery near Davis, West Virginia",
+    image: "/images/alpine-lodge-local-view.jpg",
+    alt: "Mountain scenery near White Grass and Canaan Valley, West Virginia",
     distance: "about 20 minutes from Alpine Lodge",
     budget: "Fair-priced winter adventure",
     bestFor: ["cross-country skiing", "snowshoeing", "couples", "quiet weekends"],
@@ -223,8 +259,8 @@ export const experiences = [
     seoTitle: "Dolly Sods Weekend Lodging Near Davis WV | Alpine Lodge",
     description:
       "Make Alpine Lodge your Davis base for a Dolly Sods weekend with hiking, scenic drives, big views, and practical lodging nearby.",
-    image: "/images/downtown-davis-wv.jpeg",
-    alt: "Downtown Davis, West Virginia near Alpine Lodge",
+    image: "/images/fly-fishing-blackwater-river.jpg",
+    alt: "Outdoor mountain scenery near Dolly Sods and Davis, West Virginia",
     distance: "drive times vary by trailhead and road conditions",
     budget: "Free outdoor adventure with planning required",
     bestFor: ["hiking", "photography", "scenic drives", "experienced outdoors visitors"],
@@ -540,15 +576,24 @@ export function absoluteUrl(path = "") {
 }
 
 export function lodgingJsonLd() {
+  const addressText = `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`;
+
   return {
     "@context": "https://schema.org",
-    "@type": "Hotel",
+    "@type": ["Hotel", "LodgingBusiness", "LocalBusiness"],
+    "@id": `${site.url}/#hotel`,
     name: site.name,
+    description:
+      "Fair-priced lodging in Davis, West Virginia near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music.",
     url: site.url,
     image: absoluteUrl("/images/alpine-lodge-exterior.jpg"),
     telephone: site.phone,
     email: site.email,
-    priceRange: "$$",
+    priceRange: "Rooms from $99 on select dates",
+    checkinTime: "16:00",
+    checkoutTime: "11:00",
+    sameAs: site.socials.map((social) => social.href),
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,
@@ -556,6 +601,14 @@ export function lodgingJsonLd() {
       addressRegion: site.address.state,
       postalCode: site.address.postalCode,
       addressCountry: "US"
+    },
+    makesOffer: {
+      "@type": "Offer",
+      name: "Rooms from $99 on select dates",
+      price: "99",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+      url: site.bookingUrl
     },
     amenityFeature: amenities.map((name) => ({
       "@type": "LocationFeatureSpecification",

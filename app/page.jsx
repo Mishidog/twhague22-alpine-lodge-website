@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
+  Bath,
   Bike,
   Car,
   CheckCircle2,
@@ -8,14 +9,28 @@ import {
   MapPinned,
   Mountain,
   Music,
+  PawPrint,
+  Refrigerator,
   Snowflake,
-  Trees
+  Trees,
+  Tv,
+  Wifi
 } from "lucide-react";
 import { BookingButton, SecondaryLink } from "@/components/BookingButton";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { JsonLd } from "@/components/JsonLd";
 import { SectionIntro } from "@/components/SectionIntro";
-import { distances, experiences, faqs, highlights, rateSignal, rooms, site, tripGuides } from "@/data/site";
+import {
+  amenityHighlights,
+  distances,
+  experiences,
+  faqs,
+  guestQuotes,
+  highlights,
+  rateSignal,
+  rooms,
+  tripGuides
+} from "@/data/site";
 
 export const metadata = {
   title: "Affordable Davis WV Lodging Near Blackwater Falls & Canaan Valley",
@@ -31,6 +46,15 @@ const activityIcons = [
   { label: "Food & music", icon: Music },
   { label: "Pet-friendly rooms", icon: Dog }
 ];
+
+const amenityIcons = {
+  bath: Bath,
+  booking: CheckCircle2,
+  paw: PawPrint,
+  refrigerator: Refrigerator,
+  tv: Tv,
+  wifi: Wifi
+};
 
 export default function HomePage() {
   const faqJson = {
@@ -115,6 +139,31 @@ export default function HomePage() {
       <section className="section section-muted">
         <div className="container">
           <SectionIntro
+            eyebrow="Essentials at a glance"
+            title="The basics people check before they book."
+            copy="A practical stay should answer the important questions quickly: sleep, shower, connect, keep food cold, and bring the dog when the right room is available."
+          />
+          <div className="amenity-proof-grid">
+            {amenityHighlights.map((item) => {
+              const Icon = amenityIcons[item.icon] || CheckCircle2;
+
+              return (
+                <div key={item.title} className="amenity-proof-card">
+                  <Icon aria-hidden="true" size={24} />
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.detail}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <SectionIntro
             eyebrow="Explore from Alpine Lodge"
             title="One room. A whole weekend of options."
             copy="Plan around the season, your spend, and the kind of trip you want: waterfalls, ski days, hiking, biking, music, food, pets, or a little of everything."
@@ -127,6 +176,22 @@ export default function HomePage() {
           <div className="section-actions">
             <SecondaryLink href="/experiences">See All Experiences</SecondaryLink>
           </div>
+        </div>
+      </section>
+
+      <section className="section section-muted pet-friendly-callout">
+        <div className="container pet-callout">
+          <PawPrint aria-hidden="true" size={38} />
+          <div>
+            <p className="eyebrow">Pet-friendly rooms</p>
+            <h2>Bring the dog, but book the right room.</h2>
+            <p>
+              Designated pet-friendly rooms are available for mountain weekends,
+              park visits, and road trips through Davis. Because policies and room
+              availability can change, confirm the current pet details before you arrive.
+            </p>
+          </div>
+          <BookingButton>Check Pet-Friendly Availability</BookingButton>
         </div>
       </section>
 
@@ -236,6 +301,29 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {guestQuotes.length > 0 && (
+        <section className="section section-muted">
+          <div className="container">
+            <SectionIntro
+              eyebrow="What guests say"
+              title="Proof from people who used Alpine Lodge as their basecamp."
+              copy="Short verified reviews help future guests understand what the stay is really like."
+            />
+            <div className="review-grid">
+              {guestQuotes.map((quote) => (
+                <figure key={`${quote.source}-${quote.text}`} className="review-card">
+                  <blockquote>{quote.text}</blockquote>
+                  <figcaption>
+                    <strong>{quote.name}</strong>
+                    <span>{quote.source}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="section section-muted">
         <div className="container faq-teaser">
