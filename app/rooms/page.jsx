@@ -8,7 +8,7 @@ import { amenities, rooms } from "@/data/site";
 export const metadata = {
   title: "Rooms",
   description:
-    "Book simple, budget-friendly rooms at Alpine Lodge in Davis, WV with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and pet-friendly options."
+    "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options."
 };
 
 export default function RoomsPage() {
@@ -16,8 +16,8 @@ export default function RoomsPage() {
     <>
       <PageHero
         eyebrow="Rooms at Alpine Lodge"
-        title="Practical Davis lodging for people who came to explore."
-        copy="Private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly rooms make Alpine Lodge a simple place to reset between mountain days."
+        title="A Davis room for people who came to explore."
+        copy="Private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly rooms give travelers the essentials between mountain days."
         image="/images/alpine-lodge-room.jpg"
         alt="Guest room at Alpine Lodge in Davis, WV"
         secondaryHref="/faq"
@@ -27,8 +27,8 @@ export default function RoomsPage() {
         <div className="container">
           <SectionIntro
             eyebrow="What to expect"
-            title="The essentials without the resort markup."
-            copy="Alpine Lodge is built for travelers who want a clean, straightforward place near the area's activities."
+            title="The room details travelers check first."
+            copy="Alpine Lodge keeps the stay focused on the basics visitors use before and after waterfalls, ski days, trail time, and evenings in Davis or Thomas."
           />
           <div className="amenity-grid">
             {amenities.map((item) => (
@@ -59,7 +59,7 @@ export default function RoomsPage() {
         <div className="container booking-note">
           <div>
             <p className="eyebrow">Direct booking</p>
-            <h2>Check rates and availability through Alpine Lodge reservations.</h2>
+            <h2>Check current rates and availability through Alpine Lodge reservations.</h2>
             <p>
               For pet-friendly rooms, group questions, early check-in requests, and
               current policies, reserve directly or contact the lodge before arrival.

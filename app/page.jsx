@@ -33,9 +33,9 @@ import {
 } from "@/data/site";
 
 export const metadata = {
-  title: "Affordable Davis WV Lodging Near Blackwater Falls & Canaan Valley",
+  title: "Davis WV Lodging Near Blackwater Falls & Canaan Valley",
   description:
-    "Alpine Lodge is a budget-friendly hotel in Davis, WV near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music."
+    "Alpine Lodge offers Davis, WV rooms from $99 on select dates near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music."
 };
 
 const activityIcons = [
@@ -83,11 +83,11 @@ export default function HomePage() {
         />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="eyebrow">Fair-priced lodging in Davis, West Virginia</p>
+          <p className="eyebrow">Rooms from $99 on select dates in Davis, West Virginia</p>
           <h1>Your Davis basecamp for Blackwater Falls, Canaan Valley, Timberline & Thomas.</h1>
           <p>
-            Alpine Lodge keeps the stay simple, central, and practical so you can
-            spend the trip on waterfalls, trails, skiing, food, music, and mountain days.
+            Check in on Sawmill Lane, then point the day toward waterfalls, trails,
+            skiing, food, music, and mountain air.
           </p>
           <div className="hero-actions">
             <BookingButton>Reserve Your Room</BookingButton>
@@ -123,14 +123,14 @@ export default function HomePage() {
           </div>
           <div className="prose">
             <p>
-              The best reason to stay here is not a lobby you never use. It is the
-              location. Alpine Lodge puts value-minded travelers close to the
-              Davis and Canaan Valley experiences they came for.
+              You are booking a room in Davis, not a resort itinerary. That is the
+              point. Alpine Lodge puts value-minded travelers close to the Tucker
+              County places they already searched for.
             </p>
             <p>
-              Sleep comfortably, keep the plan flexible, and use the rest of the
-              trip spend for lift tickets, local food, gear, music, gas, and one
-              more stop before heading home.
+              Sleep here, keep the plan flexible, and use the rest of the trip
+              spend for lift tickets, local food, gear, music, gas, and one more
+              stop before heading home.
             </p>
           </div>
         </div>
@@ -140,8 +140,8 @@ export default function HomePage() {
         <div className="container">
           <SectionIntro
             eyebrow="Essentials at a glance"
-            title="The basics people check before they book."
-            copy="A practical stay should answer the important questions quickly: sleep, shower, connect, keep food cold, and bring the dog when the right room is available."
+            title="Check the room basics in ten seconds."
+            copy="Private bath, Wi-Fi, refrigerator, TV, direct booking, and designated pet-friendly rooms when the right room is available."
           />
           <div className="amenity-proof-grid">
             {amenityHighlights.map((item) => {
@@ -166,7 +166,7 @@ export default function HomePage() {
           <SectionIntro
             eyebrow="Explore from Alpine Lodge"
             title="One room. A whole weekend of options."
-            copy="Plan around the season, your spend, and the kind of trip you want: waterfalls, ski days, hiking, biking, music, food, pets, or a little of everything."
+            copy="Pick the trip first: waterfall morning, ski day, bike ride, Thomas show, rainy-day food loop, dog-friendly drive, or a little of everything."
           />
           <div className="card-grid">
             {experiences.slice(0, 6).map((item) => (
@@ -186,9 +186,9 @@ export default function HomePage() {
             <p className="eyebrow">Pet-friendly rooms</p>
             <h2>Bring the dog, but book the right room.</h2>
             <p>
-              Designated pet-friendly rooms are available for mountain weekends,
-              park visits, and road trips through Davis. Because policies and room
-              availability can change, confirm the current pet details before you arrive.
+              Designated pet-friendly rooms are available for mountain weekends and
+              road trips through Davis. Because policies and room availability can
+              change, confirm the current pet details before you arrive.
             </p>
           </div>
           <BookingButton>Check Pet-Friendly Availability</BookingButton>
@@ -199,11 +199,11 @@ export default function HomePage() {
         <div className="container location-panel">
           <div>
             <p className="eyebrow">Central Davis location</p>
-            <h2>Close to the places people search for before they book.</h2>
+            <h2>About 5 to 20 minutes from the area's big reasons to visit.</h2>
             <p>
-              Alpine Lodge makes the area easier to understand: Davis for the room,
-              Blackwater Falls for the classic view, Canaan Valley and Timberline for
-              mountain recreation, Thomas for music and food.
+              Davis works as the center point: Blackwater Falls for the classic
+              view, Canaan Valley and Timberline for mountain recreation, Thomas
+              for music and food, and Alpine Lodge for the room.
             </p>
             <div className="hero-actions">
               <SecondaryLink href="/location">View Location Details</SecondaryLink>
@@ -250,11 +250,11 @@ export default function HomePage() {
       <section className="section section-dark">
         <div className="container rooms-strip">
           <div>
-            <p className="eyebrow">Rooms that keep the trip practical</p>
-            <h2>Clean basics, direct booking, and no resort pretense.</h2>
+            <p className="eyebrow">Rooms for after the day outside</p>
+            <h2>Shower, fridge, Wi-Fi, TV, sleep. Then go again.</h2>
             <p>
-              Rooms include the essentials travelers use after a long day outside:
-              private bathroom, refrigerator, flat-screen TV, Wi-Fi, and DirecTV.
+              The room is not the destination. It is where you drop the bags,
+              cool the drinks, charge the phone, and reset for tomorrow.
             </p>
             <BookingButton>Check Availability</BookingButton>
           </div>
@@ -284,8 +284,8 @@ export default function HomePage() {
         <div className="container">
           <SectionIntro
             eyebrow="Practical trip guides"
-            title="Plans visitors can use before they ever call."
-            copy="These guides are written for the likely Alpine guest: someone who wants the mountains, a fair room, and a weekend that feels worth the drive."
+            title="Plans visitors can use before they call."
+            copy="These guides are written for the likely Alpine guest: someone who wants the mountains, a fair room, and a weekend worth the drive."
           />
           <div className="guide-grid">
             {tripGuides.map((guide) => (
@@ -332,7 +332,7 @@ export default function HomePage() {
             <h2>Know what to expect before you arrive.</h2>
             <p>
               Clear details about pets, check-in, Wi-Fi, ski access, local food,
-              and booking help travelers feel confident choosing Alpine Lodge.
+              and booking help travelers decide without hunting across three tabs.
             </p>
           </div>
           <div className="faq-list compact-faq">

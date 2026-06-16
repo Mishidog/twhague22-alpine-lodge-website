@@ -16,10 +16,10 @@ export function Footer() {
       <div className="footer-cta">
         <div>
           <p className="eyebrow">Ready for Davis?</p>
-          <h2>Keep the room simple. Spend the trip outside.</h2>
+          <h2>Book the Davis room. Spend the trip outside.</h2>
           <p>
-            Book Alpine Lodge as your practical basecamp for Blackwater Falls,
-            Canaan Valley, Timberline, Thomas, and the best of Tucker County.
+            Use Alpine Lodge for Blackwater Falls, Canaan Valley, Timberline,
+            Thomas, and nearby Tucker County stops.
           </p>
         </div>
         <BookingButton>Check Availability</BookingButton>
@@ -28,8 +28,8 @@ export function Footer() {
         <div>
           <h3>Alpine Lodge</h3>
           <p>
-            Fair-priced lodging in Davis, West Virginia for travelers who
-            came for waterfalls, trails, skiing, food, music, and mountain air.
+            Rooms from $99 on select dates in Davis, West Virginia for travelers
+            who came for waterfalls, trails, skiing, food, music, and mountain air.
           </p>
           <div className="contact-stack">
             <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>
@@ -97,7 +97,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <span>© {new Date().getFullYear()} Alpine Lodge.</span>
-        <span>Davis, West Virginia basecamp lodging.</span>
+        <span>Davis, West Virginia lodging near Blackwater Falls.</span>
       </div>
     </footer>
   );

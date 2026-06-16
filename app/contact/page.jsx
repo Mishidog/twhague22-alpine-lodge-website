@@ -6,7 +6,7 @@ import { site } from "@/data/site";
 export const metadata = {
   title: "Contact & Directions",
   description:
-    "Contact Alpine Lodge in Davis, WV. Find the address, phone, email, direct booking link, and directions for budget-friendly lodging near Blackwater Falls and Canaan Valley."
+    "Contact Alpine Lodge in Davis, WV. Find the address, phone, email, direct booking link, and directions for lodging near Blackwater Falls and Canaan Valley."
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact Alpine Lodge"
-        title="Book the room. Ask the question. Start the Davis trip."
+        title="Book the room. Ask the question. Start from Davis."
         copy="Use direct reservations for availability, or contact Alpine Lodge for room, pet, group, and arrival questions."
         image="/images/alpine-lodge-exterior.jpg"
         alt="Exterior of Alpine Lodge in Davis, West Virginia"

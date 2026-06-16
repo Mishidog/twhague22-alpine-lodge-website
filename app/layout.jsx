@@ -11,11 +11,11 @@ export const metadata = {
     template: "%s | Alpine Lodge"
   },
   description:
-    "Budget-friendly lodging in Davis, WV near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, hiking, skiing, food, and music.",
+    "Davis, WV rooms from $99 on select dates near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, hiking, skiing, food, and music.",
   openGraph: {
     title: "Alpine Lodge | Davis, WV Basecamp Lodging",
     description:
-      "Stay simple, spend the trip outside. Affordable Davis lodging near waterfalls, trails, skiing, food, and music.",
+      "Book the Davis room, then spend the trip outside near waterfalls, trails, skiing, food, and music.",
     url: site.url,
     siteName: "Alpine Lodge",
     images: [

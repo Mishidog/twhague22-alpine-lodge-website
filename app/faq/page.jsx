@@ -24,7 +24,7 @@ export default function FaqPage() {
       />
       <PageHero
         eyebrow="Alpine Lodge FAQ"
-        title="Simple answers before you book."
+        title="Answers before you book the Davis room."
         copy="Use these answers to plan the room, the drive, the pets, the ski weekend, and the local activities."
         image="/images/alpine-lodge-office.jpg"
         alt="Alpine Lodge office in Davis, West Virginia"

@@ -7,7 +7,7 @@ import { distances, partnerLinks, site } from "@/data/site";
 export const metadata = {
   title: "Location",
   description:
-    "Stay in Davis, WV at Alpine Lodge near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, hiking, skiing, food, and music."
+    "Stay at Alpine Lodge in Davis, WV, about 5 minutes from Blackwater Falls, 15 minutes from Canaan Valley, and 20 minutes from Timberline and White Grass."
 };
 
 export default function LocationPage() {
@@ -15,8 +15,8 @@ export default function LocationPage() {
     <>
       <PageHero
         eyebrow="Davis, WV location"
-        title="A central place to stay for the whole Tucker County weekend."
-        copy="Alpine Lodge sits in Davis, West Virginia, close to waterfalls, ski areas, trails, food, music, and scenic drives."
+        title="Stay in Davis, then choose the day from there."
+        copy="Alpine Lodge sits at 850 Sawmill Lane in Davis, West Virginia, close to waterfalls, ski areas, trails, food, music, and scenic drives."
         image="/images/downtown-davis-wv.jpeg"
         alt="Downtown Davis, West Virginia near Alpine Lodge"
         secondaryHref="/experiences"
@@ -28,7 +28,7 @@ export default function LocationPage() {
             <p className="eyebrow">Address</p>
             <h2>{site.address.street}, {site.address.city}, {site.address.state} {site.address.postalCode}</h2>
             <p>
-              Use Alpine Lodge as the practical center point for Blackwater Falls,
+              Use Alpine Lodge as the Davis center point for Blackwater Falls,
               Canaan Valley, Timberline Mountain, White Grass, Thomas, and downtown Davis.
             </p>
             <div className="hero-actions">
@@ -67,7 +67,7 @@ export default function LocationPage() {
           <SectionIntro
             eyebrow="Useful local links"
             title="Confirm hours, prices, tickets, and conditions with the official source."
-            copy="Alpine helps you plan the trip, while operators and official park resources provide the current day-of details."
+            copy="Alpine Lodge helps frame the trip. Operators and official park resources provide the current day-of details."
           />
           <div className="link-grid">
             {partnerLinks.map((link) => (

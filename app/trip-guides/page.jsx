@@ -8,7 +8,7 @@ import { tripGuides } from "@/data/site";
 export const metadata = {
   title: "Davis WV Trip Guides",
   description:
-    "Budget-friendly Davis, WV trip guides for Alpine Lodge guests, including ski weekends, rainy days, pet-friendly travel, Blackwater Falls, Thomas, Canaan Valley, and local food."
+    "Davis, WV trip guides for Alpine Lodge guests, including ski weekends, rainy days, pet-friendly travel, Blackwater Falls, Thomas, Canaan Valley, and local food."
 };
 
 export default function TripGuidesPage() {
@@ -16,8 +16,8 @@ export default function TripGuidesPage() {
     <>
       <PageHero
         eyebrow="Practical trip guides"
-        title="A better mountain weekend starts with a clearer plan."
-        copy="Use these guides to plan the trip before you book: what to do, where to go, what to check, and how Alpine Lodge keeps lodging practical."
+        title="A better mountain weekend starts before you pack the car."
+        copy="Use these guides to plan what to do, where to go, what to check, and how to use Alpine Lodge as the Davis room for the trip."
         image="/images/alpine-lodge-local-view.jpg"
         alt="Mountain scenery near Davis, West Virginia"
         secondaryHref="/trip-planner"
@@ -27,8 +27,8 @@ export default function TripGuidesPage() {
         <div className="container">
           <SectionIntro
             eyebrow="Choose a guide"
-            title="Built for the traveler most likely to love Alpine Lodge."
-            copy="These are not luxury itineraries. They are clear, useful plans for people who want the area experience at a sensible lodging price."
+            title="Built for travelers who want the area more than the lobby."
+            copy="These are not luxury itineraries. They are clear plans for people who want waterfalls, ski days, food, music, and a sensible room in Davis."
           />
           <div className="guide-list">
             {tripGuides.map((guide) => (

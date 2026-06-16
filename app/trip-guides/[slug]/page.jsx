@@ -76,10 +76,10 @@ export default async function TripGuideDetailPage({ params }) {
               </section>
             ))}
             <div className="inline-cta">
-              <h2>Make Alpine Lodge the home base.</h2>
+              <h2>Make Alpine Lodge the Davis room.</h2>
               <p>
-                Book the simple room in Davis, then use the rest of the budget for
-                the trip itself.
+                Book the room in Davis, then use the rest of the budget for the
+                trip itself.
               </p>
               <BookingButton>Check Availability</BookingButton>
             </div>

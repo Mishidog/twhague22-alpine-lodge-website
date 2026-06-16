@@ -60,7 +60,7 @@ export default async function ExperienceDetailPage({ params }) {
             {item.body.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
-            <h2>Simple plan</h2>
+            <h2>Before you go</h2>
             <ul className="check-list">
               {item.tips.map((tip) => (
                 <li key={tip}>
@@ -99,7 +99,7 @@ export default async function ExperienceDetailPage({ params }) {
         <div className="container">
           <div className="section-intro">
             <p className="eyebrow">Keep planning</p>
-            <h2>More ways to use Alpine Lodge as the home base.</h2>
+            <h2>More ways to use Alpine Lodge as the Davis base.</h2>
           </div>
           <div className="card-grid three">
             {related.map((experience) => (

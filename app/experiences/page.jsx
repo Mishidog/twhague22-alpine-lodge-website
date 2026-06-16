@@ -6,7 +6,7 @@ import { experiences, partnerLinks } from "@/data/site";
 export const metadata = {
   title: "Things To Do Near Davis WV",
   description:
-    "Explore Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Dolly Sods, Thomas, hiking, skiing, pet-friendly trips, and budget-friendly activities from Alpine Lodge."
+    "Explore Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Dolly Sods, Thomas, hiking, skiing, pet-friendly trips, and low-cost Davis-area days from Alpine Lodge."
 };
 
 export default function ExperiencesPage() {
@@ -14,8 +14,8 @@ export default function ExperiencesPage() {
     <>
       <PageHero
         eyebrow="Explore from Alpine Lodge"
-        title="Things to do near Davis, WV without turning lodging into the whole trip cost."
-        copy="Use Alpine Lodge as the central base for waterfalls, ski areas, trails, food, music, scenic drives, and pet-friendly mountain weekends."
+        title="Things to do near Davis, WV when the room is not the whole trip."
+        copy="Use Alpine Lodge as the Davis base for waterfalls, ski areas, trails, food, music, scenic drives, and pet-friendly mountain weekends."
         image="/images/blackwater-falls.jpg"
         alt="Blackwater Falls near Alpine Lodge in Davis, WV"
         secondaryHref="/trip-guides"
@@ -25,8 +25,8 @@ export default function ExperiencesPage() {
         <div className="container">
           <SectionIntro
             eyebrow="Experience pages"
-            title="Choose the trip first. Book the room that keeps it practical."
-            copy="Each page includes the details visitors need: distance, likely cost level, best season, official links, and why Alpine Lodge works as the home base."
+            title="Choose the trip first. Book the room around it."
+            copy="Each page gives visitors the details they actually compare: drive time, likely cost level, best season, official links, and why Davis works as the base."
           />
           <div className="card-grid">
             {experiences.map((item) => (
