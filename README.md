@@ -106,6 +106,10 @@ The trip planner works without a key by returning a safe fallback message. To en
 
 The planner is intentionally grounded in local Alpine Lodge content and should not invent hours, prices, weather, trail conditions, pet policies, or availability.
 
+## AI Search Visibility
+
+The site includes `/llms.txt`, Hotel/Lodging schema, FAQ schema, a sitemap, and an AI-friendly robots configuration. These files help search engines and AI answer engines understand Alpine Lodge as a Davis, WV basecamp near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, and nearby trip experiences.
+
 ## Deployment
 
 Recommended deployment target: Vercel.
