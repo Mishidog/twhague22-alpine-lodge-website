@@ -84,6 +84,10 @@ export const amenities = [
   "Flat-screen TV",
   "Free Wi-Fi",
   "DirecTV",
+  "Irons and ironing boards",
+  "Ice machine",
+  "Laundry machines",
+  "Coffee makers available at the front desk",
   "Designated pet-friendly rooms",
   "Easy access to Davis and nearby attractions",
   "Direct Cloudbeds reservations"
@@ -485,6 +489,14 @@ export const faqs = [
       "Use the Reserve Now button on this site to book directly through the current Cloudbeds reservation system."
   },
   {
+    question: "What are the Sawmill Restaurant hours of operation?",
+    answer: "The Sawmill Restaurant is currently closed."
+  },
+  {
+    question: "What are the Alpine Lodge office hours?",
+    answer: "The Alpine Lodge office is open from 3pm to 8pm."
+  },
+  {
     question: "What is the Alpine Lodge address?",
     answer: "Alpine Lodge is located at 850 Sawmill Lane, Davis, WV 26260."
   },
@@ -496,45 +508,91 @@ export const faqs = [
   {
     question: "How far is Alpine Lodge from the local ski areas?",
     answer:
-      "Alpine Lodge is about 15 minutes from Canaan Valley and about 20 minutes from Timberline Mountain and White Grass Ski Touring Center. Drive times can vary with weather and traffic, so check conditions before winter travel."
+      "The local ski areas are about 10 miles from Alpine Lodge. Drive times can vary with weather, traffic, and winter road conditions."
   },
   {
-    question: "Are rooms pet friendly?",
+    question: "Is the hotel pet friendly?",
     answer:
-      "Designated pet-friendly rooms are available. Pet-friendly availability and current policies should be confirmed when booking."
+      "Yes. Alpine Lodge has designated pet-friendly rooms. Please book the right room type or call ahead to confirm availability."
   },
   {
-    question: "Do rooms have refrigerators?",
+    question: "Do the rooms have refrigerators?",
     answer: "Yes. Rooms include a refrigerator, private bathroom, flat-screen TV, Wi-Fi, and DirecTV."
+  },
+  {
+    question: "Do you have irons and ironing boards in the rooms?",
+    answer: "Yes. Irons and ironing boards are available."
+  },
+  {
+    question: "Is there an ice machine in the hotel?",
+    answer: "Yes. Alpine Lodge has an ice machine."
+  },
+  {
+    question: "Do you have laundry machines?",
+    answer: "Yes. Laundry machines are available."
+  },
+  {
+    question: "Do the rooms have coffee makers?",
+    answer: "Coffee makers are available at the front desk."
   },
   {
     question: "Does the hotel have Wi-Fi?",
     answer: "Yes. Alpine Lodge offers free Wi-Fi for guests."
   },
   {
-    question: "Is breakfast included?",
+    question: "What type of activities are available on site and in the area?",
     answer:
-      "Breakfast details should be confirmed directly with Alpine Lodge before arrival. The site also includes nearby food and coffee ideas for planning your stay."
+      "Area activities include skiing, hiking, biking, golf, fishing, rafting, canoeing, and hunting."
+  },
+  {
+    question: "Do you offer rental bikes?",
+    answer:
+      "No. Blackwater Bikes is directly across the street and offers a broad variety of bikes for rent."
+  },
+  {
+    question: "Do you offer rental ski equipment?",
+    answer:
+      "No. Driftland Ski Shop is about 1/8 mile from the hotel, and both Canaan Valley and Timberline Mountain have rentals available."
+  },
+  {
+    question: "Is breakfast included?",
+    answer: "Breakfast is not included at this time."
+  },
+  {
+    question: "Do you have tour guides that you recommend?",
+    answer: "The front desk has a variety of local guides they can recommend."
+  },
+  {
+    question: "What restaurants in the area do you recommend?",
+    answer:
+      "The front desk keeps current local restaurant recommendations and can help point you toward nearby options."
   },
   {
     question: "Can I get an early check-in?",
     answer:
-      "Early check-in may depend on room availability and the day's turnover schedule. Contact Alpine Lodge directly before arrival."
+      "Alpine Lodge tries to accommodate early check-in requests when possible. Availability depends on the day of the week and current occupancy."
   },
   {
     question: "What are check-in and check-out times?",
+    answer: "Check-in is at 3pm and check-out is at 11am."
+  },
+  {
+    question: "Do you provide maps for hiking in the area?",
     answer:
-      "The current site lists check-in after 4pm and check-out before 11am. Confirm current details before arrival."
+      "Maps are available at the office. Alpine Lodge also recommends using hiking apps and checking current conditions before you go."
   },
   {
     question: "Do you allow smoking in the rooms?",
+    answer: "No. Smoking is not allowed in the rooms."
+  },
+  {
+    question: "What is your cancellation policy?",
     answer:
-      "Smoking policy should be confirmed directly with Alpine Lodge. The website should be updated with the final owner-approved policy before launch."
+      "The cancellation policy is 24 hours, except for holiday weekends. Please confirm the current policy when booking."
   },
   {
     question: "Do you offer discounts for group bookings?",
-    answer:
-      "Groups should contact Alpine Lodge directly to ask about availability, room blocks, and any current group options."
+    answer: "Yes. Please call Alpine Lodge to discuss group booking options."
   }
 ];
 
@@ -590,7 +648,7 @@ export function lodgingJsonLd() {
     telephone: site.phone,
     email: site.email,
     priceRange: "Rooms from $99 on select dates",
-    checkinTime: "16:00",
+    checkinTime: "15:00",
     checkoutTime: "11:00",
     sameAs: site.socials.map((social) => social.href),
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`,
