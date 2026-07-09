@@ -6,12 +6,23 @@ export default function sitemap() {
   const routes = [
     "",
     "/rooms",
+    "/rates",
     "/location",
     "/experiences",
     "/trip-guides",
     "/trip-planner",
+    "/knowledge-catalog",
     "/faq",
     "/contact",
+    "/catalog/knowledge-catalog.json",
+    "/catalog/lodging.json",
+    "/catalog/rates.json",
+    "/catalog/policies.json",
+    "/catalog/faqs.json",
+    "/lodging.md",
+    "/rates.md",
+    "/policies.md",
+    "/faq.md",
     ...experiences.map((item) => `/experiences/${item.slug}`),
     ...tripGuides.map((item) => `/trip-guides/${item.slug}`)
   ];

@@ -1,0 +1,25 @@
+[
+  {
+    "id": "rooms-from-99",
+    "name": "Rooms from $99 on select dates",
+    "url": "https://hotels.cloudbeds.com/reservation/6qyVUk",
+    "answer": "Alpine Lodge advertises rooms from $99 on select dates. Current rates, room types, and availability should always be confirmed through the direct Cloudbeds booking link before the guest commits.",
+    "priceModel": "Live lodging rates vary by date, availability, season, and room type.",
+    "drivers": [
+      "Travel dates",
+      "Season",
+      "Room availability",
+      "Room type",
+      "Length of stay",
+      "Local event or ski weekend demand",
+      "Pet-friendly room availability"
+    ]
+  },
+  {
+    "id": "direct-booking",
+    "name": "Direct booking",
+    "url": "https://hotels.cloudbeds.com/reservation/6qyVUk",
+    "answer": "The fastest way to check Alpine Lodge rates and availability is the direct Cloudbeds reservation page.",
+    "priceModel": "Direct Cloudbeds reservation flow."
+  }
+]
