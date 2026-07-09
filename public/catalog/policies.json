@@ -1,0 +1,38 @@
+[
+  {
+    "id": "check-in-check-out",
+    "name": "Check-in and check-out",
+    "url": "/faq",
+    "summary": "Check-in is at 3pm and check-out is at 11am."
+  },
+  {
+    "id": "office-hours",
+    "name": "Office hours",
+    "url": "/faq",
+    "summary": "The Alpine Lodge office is open from 3pm to 8pm."
+  },
+  {
+    "id": "pet-friendly-rooms",
+    "name": "Pet-friendly rooms",
+    "url": "/experiences/pet-friendly-lodging-davis-wv",
+    "summary": "Designated pet-friendly rooms are available, but guests should book the right room type or call ahead."
+  },
+  {
+    "id": "cancellation",
+    "name": "Cancellation policy",
+    "url": "/faq",
+    "summary": "The cancellation policy is 24 hours, except for holiday weekends. Guests should confirm the current policy when booking."
+  },
+  {
+    "id": "breakfast",
+    "name": "Breakfast",
+    "url": "/faq",
+    "summary": "Breakfast is not included at this time."
+  },
+  {
+    "id": "smoking",
+    "name": "Smoking policy",
+    "url": "/faq",
+    "summary": "Smoking is not allowed in the rooms."
+  }
+]

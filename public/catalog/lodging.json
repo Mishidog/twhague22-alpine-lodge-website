@@ -1,0 +1,28 @@
+[
+  {
+    "id": "davis-wv-lodging",
+    "name": "Davis, WV lodging",
+    "url": "/rooms",
+    "summary": "Practical Alpine Lodge rooms in Davis, West Virginia for travelers visiting Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, Dolly Sods, and Tucker County.",
+    "includes": [
+      "Private bathroom",
+      "Refrigerator",
+      "Flat-screen TV",
+      "Free Wi-Fi",
+      "DirecTV",
+      "Direct Cloudbeds reservations"
+    ]
+  },
+  {
+    "id": "pet-friendly-lodging",
+    "name": "Pet-friendly lodging",
+    "url": "/experiences/pet-friendly-lodging-davis-wv",
+    "summary": "Designated pet-friendly rooms are available for Davis, WV travelers bringing a dog to Blackwater Falls, Canaan Valley, Thomas, or nearby trails."
+  },
+  {
+    "id": "activity-basecamp",
+    "name": "Outdoor and local experience basecamp",
+    "url": "/experiences",
+    "summary": "Alpine Lodge positions Davis as the center point for Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, hiking, skiing, food, music, and scenic drives."
+  }
+]

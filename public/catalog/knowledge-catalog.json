@@ -1,0 +1,142 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-07-09",
+  "organization": {
+    "name": "Alpine Lodge",
+    "url": "https://alpinelodgewva.com",
+    "bookingUrl": "https://hotels.cloudbeds.com/reservation/6qyVUk",
+    "phone": "+1 304-259-5245",
+    "email": "office@alpinelodgewva.com",
+    "address": "850 Sawmill Lane, Davis, WV 26260",
+    "positioning": "A practical, fair-priced Davis, WV basecamp for Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, Dolly Sods, hiking, skiing, food, music, and low-cost mountain weekends.",
+    "priceSignal": "Rooms from $99 on select dates, with live rates before you reserve.",
+    "proofPoints": [
+      "Located at 850 Sawmill Lane in Davis, WV",
+      "Rooms from $99 on select dates",
+      "Direct Cloudbeds reservations",
+      "About 5 minutes from Blackwater Falls",
+      "About 15 minutes from Canaan Valley",
+      "About 20 minutes from Timberline Mountain and White Grass",
+      "Designated pet-friendly rooms available",
+      "Rooms include private bathroom, refrigerator, flat-screen TV, Wi-Fi, and DirecTV"
+    ]
+  },
+  "lodgingServices": [
+    {
+      "id": "davis-wv-lodging",
+      "name": "Davis, WV lodging",
+      "url": "/rooms",
+      "summary": "Practical Alpine Lodge rooms in Davis, West Virginia for travelers visiting Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, Dolly Sods, and Tucker County.",
+      "bookingFactors": [
+        "Travel dates",
+        "Room availability",
+        "Season and local events",
+        "Pet-friendly room availability",
+        "Group size",
+        "Current Cloudbeds rate and room options"
+      ]
+    },
+    {
+      "id": "pet-friendly-lodging",
+      "name": "Pet-friendly lodging",
+      "url": "/experiences/pet-friendly-lodging-davis-wv",
+      "summary": "Designated pet-friendly rooms are available for Davis, WV travelers bringing a dog to Blackwater Falls, Canaan Valley, Thomas, or nearby trails.",
+      "bookingFactors": [
+        "Limited pet-friendly room availability",
+        "Current pet policy",
+        "Travel dates",
+        "Room type",
+        "Nearby activity pet rules"
+      ]
+    },
+    {
+      "id": "activity-basecamp",
+      "name": "Outdoor and local experience basecamp",
+      "url": "/experiences",
+      "summary": "Alpine Lodge positions Davis as the center point for Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, hiking, skiing, food, music, and scenic drives.",
+      "bookingFactors": [
+        "Season",
+        "Weather",
+        "Road conditions",
+        "Activity operator hours",
+        "Tickets, rentals, and availability from official operators"
+      ]
+    }
+  ],
+  "rates": [
+    {
+      "id": "rooms-from-99",
+      "name": "Rooms from $99 on select dates",
+      "url": "https://hotels.cloudbeds.com/reservation/6qyVUk",
+      "answer": "Alpine Lodge advertises rooms from $99 on select dates. Current rates, room types, and availability should always be confirmed through the direct Cloudbeds booking link before the guest commits.",
+      "priceModel": "Live lodging rates vary by date, availability, season, and room type."
+    },
+    {
+      "id": "direct-booking",
+      "name": "Direct booking",
+      "url": "https://hotels.cloudbeds.com/reservation/6qyVUk",
+      "answer": "The fastest way to check Alpine Lodge rates and availability is the direct Cloudbeds reservation page.",
+      "priceModel": "Direct Cloudbeds reservation flow."
+    }
+  ],
+  "amenities": [
+    "Private bathroom",
+    "Refrigerator",
+    "Flat-screen TV",
+    "Free Wi-Fi",
+    "DirecTV",
+    "Irons and ironing boards",
+    "Ice machine",
+    "Laundry machines",
+    "Coffee makers available at the front desk",
+    "Designated pet-friendly rooms",
+    "Easy access to Davis and nearby attractions",
+    "Direct Cloudbeds reservations"
+  ],
+  "nearbyDestinations": [
+    { "place": "Downtown Davis", "time": "about 2 minutes" },
+    { "place": "Blackwater Falls State Park", "time": "about 5 minutes" },
+    { "place": "Thomas, WV", "time": "about 10 minutes" },
+    { "place": "Canaan Valley", "time": "about 15 minutes" },
+    { "place": "Timberline Mountain", "time": "about 20 minutes" },
+    { "place": "White Grass Ski Touring Center", "time": "about 20 minutes" }
+  ],
+  "policies": [
+    {
+      "id": "check-in-check-out",
+      "name": "Check-in and check-out",
+      "summary": "Check-in is at 3pm and check-out is at 11am."
+    },
+    {
+      "id": "office-hours",
+      "name": "Office hours",
+      "summary": "The Alpine Lodge office is open from 3pm to 8pm."
+    },
+    {
+      "id": "pet-friendly-rooms",
+      "name": "Pet-friendly rooms",
+      "summary": "Designated pet-friendly rooms are available, but guests should book the right room type or call ahead."
+    },
+    {
+      "id": "cancellation",
+      "name": "Cancellation policy",
+      "summary": "The cancellation policy is 24 hours, except for holiday weekends. Guests should confirm the current policy when booking."
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "summary": "Breakfast is not included at this time."
+    },
+    {
+      "id": "smoking",
+      "name": "Smoking policy",
+      "summary": "Smoking is not allowed in the rooms."
+    }
+  ],
+  "aiUsageNotes": [
+    "Do not invent rates, availability, guest reviews, pet fees, breakfast details, weather, trail conditions, road access, activity hours, or ticket prices.",
+    "Use the direct Cloudbeds booking link for current rates and availability.",
+    "Use official operator links for current hours, tickets, rentals, trail status, weather-sensitive access, and activity-specific rules.",
+    "Position Alpine Lodge as a practical Davis basecamp, not a luxury resort."
+  ]
+}
