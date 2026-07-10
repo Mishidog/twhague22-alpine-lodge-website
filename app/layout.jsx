@@ -7,7 +7,7 @@ import { lodgingJsonLd, site } from "@/data/site";
 export const metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Alpine Lodge | Affordable Lodging in Davis, West Virginia",
+    default: "Alpine Lodge | Davis WV Basecamp Lodging",
     template: "%s | Alpine Lodge"
   },
   description:
@@ -28,6 +28,13 @@ export const metadata = {
     ],
     locale: "en_US",
     type: "website"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Alpine Lodge | Davis, WV Basecamp Lodging",
+    description:
+      "Rooms from $99 on select dates near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, and Thomas.",
+    images: ["/images/alpine-lodge-exterior.jpg"]
   }
 };
 

@@ -4,6 +4,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
 import {
+  catalogUpdated,
   knowledgeCatalog,
   lodgingCatalogJsonLd,
   lodgingServices,
@@ -43,6 +44,7 @@ export default function KnowledgeCatalogPage() {
               The catalog does not replace the website design. It gives the site a clearer structured layer
               for search, AI answer engines, trip planners, and future content updates.
             </p>
+            <p className="fine-print">Catalog last updated: {catalogUpdated}.</p>
           </div>
         </div>
       </section>

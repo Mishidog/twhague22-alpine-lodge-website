@@ -1,6 +1,6 @@
 # Alpine Lodge FAQ Knowledge
 
-Last updated: 2026-07-09
+Last updated: 2026-07-10
 
 ## How do I book a room at Alpine Lodge?
 

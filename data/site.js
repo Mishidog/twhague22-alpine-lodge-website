@@ -25,6 +25,7 @@ export const site = {
 
 export const nav = [
   { label: "Rooms", href: "/rooms" },
+  { label: "Rates", href: "/rates" },
   { label: "Location", href: "/location" },
   { label: "Experiences", href: "/experiences" },
   { label: "Trip Guides", href: "/trip-guides" },
@@ -49,7 +50,38 @@ export const rateSignal = {
   headerNote: "Book direct"
 };
 
-export const guestQuotes = [];
+export const googleReviewsUrl =
+  "https://www.google.com/travel/hotels/entity/ChgI-5Tq9trp-JDxARoLL2cvMXZjNmYyZzYQAQ?hl=en&ap=ugEHcmV2aWV3cw";
+
+export const guestQuotes = [
+  {
+    name: "Matt Clark",
+    source: "Google review",
+    sourceUrl: googleReviewsUrl,
+    rating: 5,
+    context: "Group stay for a half marathon",
+    text: "The hotel was clean and comfortable and great for a group.",
+    segment: "group"
+  },
+  {
+    name: "A 1",
+    source: "Google review",
+    sourceUrl: googleReviewsUrl,
+    rating: 5,
+    context: "Guest review highlighting room comfort",
+    text: "Quiet, very large, well-insulated rooms.",
+    segment: "room"
+  },
+  {
+    name: "Bill Barowsky",
+    source: "Google review",
+    sourceUrl: googleReviewsUrl,
+    rating: 5,
+    context: "Business traveler who planned a two-week work stay",
+    text: "This place was wonderful.",
+    segment: "work"
+  }
+];
 
 export const rooms = [
   {
@@ -239,8 +271,8 @@ export const experiences = [
     seoTitle: "Lodging Near White Grass Ski Touring Center | Alpine Lodge",
     description:
       "Plan a cross-country ski or snowshoe weekend with Alpine Lodge in Davis, about 20 minutes from White Grass Ski Touring Center.",
-    image: "/images/alpine-lodge-local-view.jpg",
-    alt: "Mountain scenery near White Grass and Canaan Valley, West Virginia",
+    image: "/images/white-grass-ski-touring.jpg",
+    alt: "Cross-country ski trails at White Grass Ski Touring Center in West Virginia",
     distance: "about 20 minutes from Alpine Lodge",
     budget: "Fair-priced winter adventure",
     bestFor: ["cross-country skiing", "snowshoeing", "couples", "quiet weekends"],
@@ -263,8 +295,8 @@ export const experiences = [
     seoTitle: "Dolly Sods Weekend Lodging Near Davis WV | Alpine Lodge",
     description:
       "Make Alpine Lodge your Davis base for a Dolly Sods weekend with hiking, scenic drives, big views, and a room in town before and after the trail day.",
-    image: "/images/fly-fishing-blackwater-river.jpg",
-    alt: "Outdoor mountain scenery near Dolly Sods and Davis, West Virginia",
+    image: "/images/dolly-sods-autumn-road.jpg",
+    alt: "Misty autumn forest road in Dolly Sods Wilderness near Davis, West Virginia",
     distance: "drive times vary by trailhead and road conditions",
     budget: "Free outdoor adventure with planning required",
     bestFor: ["hiking", "photography", "scenic drives", "experienced outdoors visitors"],
@@ -288,8 +320,8 @@ export const experiences = [
     seoTitle: "Stay Near Thomas WV Music, Food & The Purple Fiddle | Alpine Lodge",
     description:
       "Stay in Davis at Alpine Lodge, about 10 minutes from Thomas, WV music, galleries, restaurants, shops, and The Purple Fiddle.",
-    image: "/images/downtown-davis-wv.jpeg",
-    alt: "Historic downtown Davis near Thomas, West Virginia",
+    image: "/images/thomas-west-virginia-east-avenue.jpg",
+    alt: "Historic brick buildings on East Avenue in Thomas, West Virginia",
     distance: "about 10 minutes from Alpine Lodge",
     budget: "Low-cost exploring, food, drinks, and ticketed shows",
     bestFor: ["music", "food", "couples", "friends", "rainy days"],
@@ -596,6 +628,17 @@ export const faqs = [
   }
 ];
 
+const homepageFaqQuestions = [
+  "How do I book a room at Alpine Lodge?",
+  "Is the hotel pet friendly?",
+  "Do the rooms have refrigerators?",
+  "What are check-in and check-out times?"
+];
+
+export const homepageFaqs = homepageFaqQuestions
+  .map((question) => faqs.find((faq) => faq.question === question))
+  .filter(Boolean);
+
 export const partnerLinks = [
   {
     name: "Blackwater Falls State Park",
@@ -663,9 +706,10 @@ export function lodgingJsonLd() {
     makesOffer: {
       "@type": "Offer",
       name: "Rooms from $99 on select dates",
+      description:
+        "Rooms from $99 on select dates. Current rates and availability must be confirmed through direct booking.",
       price: "99",
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
       url: site.bookingUrl
     },
     amenityFeature: amenities.map((name) => ({

@@ -1,6 +1,6 @@
 # Alpine Lodge Rates Knowledge
 
-Last updated: 2026-07-09
+Last updated: 2026-07-10
 
 Alpine Lodge advertises rooms from $99 on select dates. Current rates, room types, and availability should always be confirmed through the direct Cloudbeds booking link before the guest commits.
 

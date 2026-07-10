@@ -55,7 +55,13 @@ export function Footer() {
               </li>
             ))}
             <li>
+              <Link href="/crew-lodging-davis-wv">Crew Lodging</Link>
+            </li>
+            <li>
               <Link href="/contact">Contact</Link>
+            </li>
+            <li>
+              <Link href="/photo-credits">Photo Credits</Link>
             </li>
           </ul>
         </div>

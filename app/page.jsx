@@ -19,14 +19,15 @@ import {
 import { BookingButton, SecondaryLink } from "@/components/BookingButton";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { JsonLd } from "@/components/JsonLd";
+import { ReviewCard } from "@/components/ReviewCard";
 import { SectionIntro } from "@/components/SectionIntro";
 import {
   amenityHighlights,
   distances,
   experiences,
-  faqs,
   guestQuotes,
   highlights,
+  homepageFaqs,
   rateSignal,
   rooms,
   tripGuides
@@ -60,7 +61,7 @@ export default function HomePage() {
   const faqJson = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.slice(0, 6).map((faq) => ({
+    mainEntity: homepageFaqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
@@ -158,6 +159,21 @@ export default function HomePage() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container booking-note">
+          <div>
+            <p className="eyebrow">Working in the Davis area?</p>
+            <h2>A practical room between long workdays.</h2>
+            <p>
+              Contractors, crews, and traveling workers can use Alpine Lodge for
+              Wi-Fi, in-room refrigerators, laundry access, ice, and group booking
+              options by phone.
+            </p>
+          </div>
+          <SecondaryLink href="/crew-lodging-davis-wv">View Crew Lodging</SecondaryLink>
         </div>
       </section>
 
@@ -276,7 +292,10 @@ export default function HomePage() {
             <h2>{rateSignal.headline}</h2>
             <p>{rateSignal.body}</p>
           </div>
-          <BookingButton>{rateSignal.cta}</BookingButton>
+          <div className="hero-actions">
+            <SecondaryLink href="/rates">How Rates Work</SecondaryLink>
+            <BookingButton>{rateSignal.cta}</BookingButton>
+          </div>
         </div>
       </section>
 
@@ -306,19 +325,13 @@ export default function HomePage() {
         <section className="section section-muted">
           <div className="container">
             <SectionIntro
-              eyebrow="What guests say"
-              title="Proof from people who used Alpine Lodge as their basecamp."
-              copy="Short verified reviews help future guests understand what the stay is really like."
+              eyebrow="Selected 5/5 Google reviews"
+              title="Clean rooms, helpful service, and a practical stay."
+              copy="These verified guest excerpts speak to the things Alpine Lodge visitors tend to care about most."
             />
             <div className="review-grid">
               {guestQuotes.map((quote) => (
-                <figure key={`${quote.source}-${quote.text}`} className="review-card">
-                  <blockquote>{quote.text}</blockquote>
-                  <figcaption>
-                    <strong>{quote.name}</strong>
-                    <span>{quote.source}</span>
-                  </figcaption>
-                </figure>
+                <ReviewCard key={`${quote.name}-${quote.text}`} quote={quote} />
               ))}
             </div>
           </div>
@@ -336,7 +349,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="faq-list compact-faq">
-            {faqs.slice(0, 4).map((faq) => (
+            {homepageFaqs.map((faq) => (
               <details key={faq.question}>
                 <summary>{faq.question}</summary>
                 <p>{faq.answer}</p>

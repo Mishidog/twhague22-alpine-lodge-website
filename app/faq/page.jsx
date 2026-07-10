@@ -3,7 +3,7 @@ import { PageHero } from "@/components/PageHero";
 import { faqs } from "@/data/site";
 
 export const metadata = {
-  title: "FAQ",
+  title: "Davis WV Hotel FAQ: Pets, Wi-Fi & Policies",
   description:
     "Answers about booking Alpine Lodge in Davis, WV, including pets, Wi-Fi, room amenities, check-in, ski access, Blackwater Falls, group bookings, and local planning."
 };
