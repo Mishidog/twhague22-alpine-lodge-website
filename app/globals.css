@@ -564,12 +564,6 @@ p {
   text-shadow: 0 1px 14px rgba(0, 0, 0, 0.28);
 }
 
-.experience-card p:not(.eyebrow),
-.experience-card .meta-row,
-.experience-card .text-link {
-  color: rgba(255, 249, 234, 0.86);
-}
-
 .experience-card-compact .card-image {
   min-height: 100%;
 }
@@ -596,6 +590,14 @@ p {
 .detail-article p,
 .day-block li {
   color: var(--muted);
+}
+
+.experience-card h3,
+.experience-card .card-body p:not(.eyebrow),
+.experience-card .meta-row,
+.experience-card .text-link {
+  color: var(--cream);
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.48);
 }
 
 .meta-row {
