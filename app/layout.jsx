@@ -1,8 +1,29 @@
 import "./globals.css";
+import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { lodgingJsonLd, site } from "@/data/site";
+
+const bodyFont = localFont({
+  src: [
+    { path: "./fonts/barlow-400-latin.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/barlow-500-latin.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/barlow-600-latin.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/barlow-700-latin.woff2", weight: "700", style: "normal" },
+    { path: "./fonts/barlow-800-latin.woff2", weight: "800", style: "normal" },
+    { path: "./fonts/barlow-900-latin.woff2", weight: "900", style: "normal" }
+  ],
+  variable: "--font-body",
+  display: "swap"
+});
+
+const displayFont = localFont({
+  src: "./fonts/newsreader-variable-latin.woff2",
+  weight: "200 800",
+  variable: "--font-display",
+  display: "swap"
+});
 
 export const metadata = {
   metadataBase: new URL(site.url),
@@ -40,7 +61,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${bodyFont.variable} ${displayFont.variable}`}>
       <body>
         <JsonLd data={lodgingJsonLd()} />
         <Header />

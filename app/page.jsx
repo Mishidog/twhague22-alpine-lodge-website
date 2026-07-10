@@ -76,16 +76,16 @@ export default function HomePage() {
       <JsonLd data={faqJson} />
       <section className="home-hero">
         <Image
-          src="/images/alpine-lodge-exterior.jpg"
-          alt="Alpine Lodge exterior in Davis, West Virginia"
+          src="/images/alpine-lodge-property.jpeg"
+          alt="Mountain landscape near Alpine Lodge in Davis, West Virginia"
           fill
           priority
           sizes="100vw"
         />
         <div className="hero-overlay" />
         <div className="hero-content">
-          <p className="eyebrow">Rooms from $99 on select dates in Davis, West Virginia</p>
-          <h1>Your Davis basecamp for Blackwater Falls, Canaan Valley, Timberline & Thomas.</h1>
+          <p className="eyebrow">Davis, West Virginia · Rooms from $99 on select dates</p>
+          <h1>Alpine Lodge: your Davis basecamp for the whole Tucker County trip.</h1>
           <p>
             Check in on Sawmill Lane, then point the day toward waterfalls, trails,
             skiing, food, music, and mountain air.
@@ -116,23 +116,55 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
-        <div className="container split">
-          <div>
-            <p className="eyebrow">The Alpine Lodge lane</p>
-            <h2>Not a luxury resort. A smarter place to start the trip.</h2>
+      <section className="section basecamp-story">
+        <div className="container">
+          <div className="split">
+            <div>
+              <p className="eyebrow">The Alpine Lodge lane</p>
+              <h2>Not a luxury resort. A smarter place to start the trip.</h2>
+            </div>
+            <div className="prose">
+              <p>
+                You are booking a room in Davis, not a resort itinerary. That is the
+                point. Alpine Lodge puts value-minded travelers close to the Tucker
+                County places they already searched for.
+              </p>
+              <p>
+                Sleep here, keep the plan flexible, and use the rest of the trip
+                spend for lift tickets, local food, gear, music, gas, and one more
+                stop before heading home.
+              </p>
+            </div>
           </div>
-          <div className="prose">
-            <p>
-              You are booking a room in Davis, not a resort itinerary. That is the
-              point. Alpine Lodge puts value-minded travelers close to the Tucker
-              County places they already searched for.
-            </p>
-            <p>
-              Sleep here, keep the plan flexible, and use the rest of the trip
-              spend for lift tickets, local food, gear, music, gas, and one more
-              stop before heading home.
-            </p>
+
+          <div className="basecamp-image-sequence" aria-label="A Tucker County day from Alpine Lodge">
+            <figure className="sequence-frame sequence-frame-wide">
+              <Image
+                src="/images/blackwater-falls.jpg"
+                alt="Blackwater Falls near Davis, West Virginia"
+                fill
+                sizes="(max-width: 760px) 100vw, 42vw"
+              />
+              <figcaption><strong>Go outside</strong><span>Blackwater Falls, about 5 minutes away</span></figcaption>
+            </figure>
+            <figure className="sequence-frame">
+              <Image
+                src="/images/alpine-lodge-exterior.jpg"
+                alt="Alpine Lodge exterior on Sawmill Lane in Davis, West Virginia"
+                fill
+                sizes="(max-width: 760px) 100vw, 29vw"
+              />
+              <figcaption><strong>Come back to Davis</strong><span>Park once. Keep tomorrow flexible.</span></figcaption>
+            </figure>
+            <figure className="sequence-frame">
+              <Image
+                src="/images/alpine-lodge-room.jpg"
+                alt="Guest room at Alpine Lodge in Davis, West Virginia"
+                fill
+                sizes="(max-width: 760px) 100vw, 29vw"
+              />
+              <figcaption><strong>Reset and go again</strong><span>Private bath, refrigerator, Wi-Fi, and sleep</span></figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -184,7 +216,7 @@ export default function HomePage() {
             title="One room. A whole weekend of options."
             copy="Pick the trip first: waterfall morning, ski day, bike ride, Thomas show, rainy-day food loop, dog-friendly drive, or a little of everything."
           />
-          <div className="card-grid">
+          <div className="card-grid experience-showcase">
             {experiences.slice(0, 6).map((item) => (
               <ExperienceCard key={item.slug} item={item} compact />
             ))}
@@ -309,7 +341,7 @@ export default function HomePage() {
           <div className="guide-grid">
             {tripGuides.map((guide) => (
               <Link href={`/trip-guides/${guide.slug}`} key={guide.slug} className="guide-card">
-                <Image src={guide.image} alt="" fill sizes="(max-width: 760px) 100vw, 25vw" />
+                <Image src={guide.image} alt={guide.title} fill sizes="(max-width: 760px) 100vw, 25vw" />
                 <div>
                   <p className="eyebrow">Trip guide</p>
                   <h3>{guide.title}</h3>
