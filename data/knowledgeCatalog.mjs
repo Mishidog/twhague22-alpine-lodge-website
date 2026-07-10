@@ -1,6 +1,6 @@
 import { amenities, distances, experiences, faqs, partnerLinks, rateSignal, rooms, site, tripGuides } from "./site.js";
 
-export const catalogUpdated = "2026-07-09";
+export const catalogUpdated = "2026-07-10";
 
 export const lodgingServices = [
   {
@@ -37,6 +37,42 @@ export const lodgingServices = [
       "Are rooms available from $99?",
       "Is Alpine Lodge close to Blackwater Falls?",
       "Is the hotel pet friendly?"
+    ]
+  },
+  {
+    id: "crew-lodging-davis-wv",
+    name: "Crew and longer work-stay lodging",
+    url: "/crew-lodging-davis-wv",
+    summary:
+      "Practical Davis, West Virginia rooms for contractors, crews, project teams, and traveling workers who need lodging between workdays in the Davis and Tucker County area.",
+    whoItHelps: [
+      "Contractors",
+      "Construction and utility crews",
+      "Traveling workers",
+      "Project managers booking several rooms",
+      "Employers arranging longer work stays"
+    ],
+    includes: [
+      "Private bathroom",
+      "In-room refrigerator",
+      "Free Wi-Fi",
+      "Laundry machines",
+      "Ice machine",
+      "Irons and ironing boards",
+      "Group booking options by phone"
+    ],
+    bookingFactors: [
+      "Work dates",
+      "Number of rooms",
+      "Expected length of stay",
+      "Current room availability",
+      "Current Cloudbeds rate or group booking options"
+    ],
+    commonQuestions: [
+      "Does Alpine Lodge accommodate contractors and work crews?",
+      "What amenities are useful for a longer work stay?",
+      "Are group booking options available?",
+      "How do I check current rates and availability?"
     ]
   },
   {

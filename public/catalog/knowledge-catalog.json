@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastUpdated": "2026-07-09",
+  "lastUpdated": "2026-07-10",
   "organization": {
     "name": "Alpine Lodge",
     "url": "https://alpinelodgewva.com",
@@ -34,6 +34,19 @@
         "Pet-friendly room availability",
         "Group size",
         "Current Cloudbeds rate and room options"
+      ]
+    },
+    {
+      "id": "crew-lodging-davis-wv",
+      "name": "Crew and longer work-stay lodging",
+      "url": "/crew-lodging-davis-wv",
+      "summary": "Practical Davis, West Virginia rooms for contractors, crews, project teams, and traveling workers who need lodging between workdays in the Davis and Tucker County area.",
+      "bookingFactors": [
+        "Work dates",
+        "Number of rooms",
+        "Expected length of stay",
+        "Current room availability",
+        "Current Cloudbeds rate or group booking options"
       ]
     },
     {

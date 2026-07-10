@@ -20,6 +20,7 @@ def load_site_data():
     node = os.environ.get("NODE_BIN", "node")
     script = """
       import * as data from './data/site.js';
+      import * as catalog from './data/knowledgeCatalog.mjs';
       const keys = [
         'site',
         'nav',
@@ -33,10 +34,14 @@ def load_site_data():
         'experiences',
         'tripGuides',
         'faqs',
+        'homepageFaqs',
         'partnerLinks'
       ];
       const out = {};
       for (const key of keys) out[key] = data[key];
+      for (const key of ['catalogUpdated', 'lodgingServices', 'rateKnowledge', 'policyKnowledge']) {
+        out[key] = catalog[key];
+      }
       console.log(JSON.stringify(out, null, 2));
     """
     result = subprocess.run(
@@ -202,7 +207,7 @@ def build_document(data):
                 ("Footer brand heading", "Alpine Lodge"),
                 ("Footer brand body", "Rooms from $99 on select dates in Davis, West Virginia for travelers who came for waterfalls, trails, skiing, food, music, and mountain air."),
                 ("Footer CTA", "Check Availability"),
-                ("Footer site links", ", ".join(item["label"] for item in nav) + ", Contact"),
+                ("Footer site links", ", ".join(item["label"] for item in nav) + ", Crew Lodging, Contact, Photo Credits"),
                 ("Footer social labels", ", ".join(item["label"] for item in site["socials"])),
                 ("Footer note", "Experience links are provided for planning. Confirm hours, prices, conditions, and policies with each operator."),
                 ("Footer bottom", "Alpine Lodge. Davis, West Virginia lodging near Blackwater Falls."),
@@ -264,6 +269,15 @@ def build_document(data):
     home_sections.extend(
         [
             (
+                "Crew Lodging Callout",
+                [
+                    ("Eyebrow", "Working in the Davis area?"),
+                    ("Headline", "A practical room between long workdays."),
+                    ("Body", "Contractors, crews, and traveling workers can use Alpine Lodge for Wi-Fi, in-room refrigerators, laundry access, ice, and group booking options by phone."),
+                    ("CTA", "View Crew Lodging"),
+                ],
+            ),
+            (
                 "Experience Grid Intro",
                 [
                     ("Eyebrow", "Explore from Alpine Lodge"),
@@ -315,7 +329,8 @@ def build_document(data):
                     ("Eyebrow", rate["eyebrow"]),
                     ("Headline", rate["headline"]),
                     ("Body", rate["body"]),
-                    ("CTA", rate["cta"]),
+                    ("CTA 1", "How Rates Work"),
+                    ("CTA 2", rate["cta"]),
                 ],
             ),
             (
@@ -327,12 +342,24 @@ def build_document(data):
                 ],
             ),
             (
+                "Selected 5/5 Google Reviews",
+                [
+                    ("Eyebrow", "Selected 5/5 Google reviews"),
+                    ("Headline", "Clean rooms, helpful service, and a practical stay."),
+                    ("Body", "These verified guest excerpts speak to the things Alpine Lodge visitors tend to care about most."),
+                ] + [
+                    (quote["name"], f"{quote['rating']}/5 — {quote['text']} Context: {quote['context']}")
+                    for quote in data["guestQuotes"]
+                ],
+            ),
+            (
                 "FAQ Teaser",
                 [
                     ("Eyebrow", "Good answers build confidence"),
                     ("Headline", "Know what to expect before you arrive."),
                     ("Body", "Clear details about pets, check-in, Wi-Fi, ski access, local food, and booking help travelers decide without hunting across three tabs."),
                     ("CTA", "Read all FAQs"),
+                    ("Questions shown", "; ".join(faq["question"] for faq in data["homepageFaqs"])),
                 ],
             ),
             (
@@ -399,8 +426,175 @@ def build_document(data):
             ],
         )
     )
-    add_page(doc, "Rooms Page", {"title": "Rooms", "description": "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options."}, rooms_sections)
-    append_md_page(md, "Rooms Page", {"title": "Rooms", "description": "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options."}, rooms_sections)
+    add_page(doc, "Rooms Page", {"title": "Davis WV Hotel Rooms & Amenities", "description": "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options."}, rooms_sections)
+    append_md_page(md, "Rooms Page", {"title": "Davis WV Hotel Rooms & Amenities", "description": "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options."}, rooms_sections)
+
+    rates_sections = [
+        (
+            "Hero",
+            [
+                ("Eyebrow", "Rates and direct booking"),
+                ("Headline", "Rooms from $99 on select dates, with live rates before you reserve."),
+                ("Body", "Rates change by date, availability, room type, season, and local demand. Use the direct booking page for current Alpine Lodge rates."),
+                ("Primary CTA", "Check Live Rates"),
+                ("Secondary CTA", "View Rooms"),
+                ("Image alt text", "Guest room at Alpine Lodge in Davis, West Virginia"),
+            ],
+        ),
+        (
+            "Rate Explanation",
+            [
+                ("Eyebrow", "Short answer"),
+                ("Headline", "The booking engine is the current source for room price and availability."),
+                ("Paragraph 1", "Alpine Lodge can be a fair-priced Davis basecamp, with rooms from $99 on select dates. The current rate depends on the dates, room type, availability, season, and local demand."),
+                ("Paragraph 2", "For accurate pricing, guests should use the direct Cloudbeds reservation page rather than old search snippets or third-party summaries."),
+            ],
+        ),
+        (
+            "Rate Drivers",
+            [
+                ("Eyebrow", "What changes the rate"),
+                ("Headline", "The same room can price differently depending on the trip."),
+                ("Body", "These are the main factors guests should expect when comparing dates."),
+                ("Factors", "Travel dates; Season; Room availability; Room type; Length of stay; Local event or ski weekend demand; Pet-friendly room availability"),
+            ],
+        ),
+        (
+            "Booking Note",
+            [
+                ("Eyebrow", "Direct reservations"),
+                ("Headline", "Check the live room options before you commit."),
+                ("Body", "The booking page shows current Alpine Lodge availability and rates for the selected dates. For pet-friendly rooms, group questions, or arrival questions, contact the lodge directly."),
+                ("CTA", "Open Booking Site"),
+            ],
+        ),
+    ]
+    add_page(doc, "Rates Page", {"title": "Rates & Booking", "description": "Alpine Lodge rooms from $99 on select dates in Davis, WV. Check current room rates, availability, pet-friendly options, and booking details through direct Cloudbeds reservations."}, rates_sections)
+    append_md_page(md, "Rates Page", {"title": "Rates & Booking", "description": "Alpine Lodge rooms from $99 on select dates in Davis, WV. Check current room rates, availability, pet-friendly options, and booking details through direct Cloudbeds reservations."}, rates_sections)
+
+    crew_sections = [
+        (
+            "Hero",
+            [
+                ("Eyebrow", "Crew lodging in Davis, West Virginia"),
+                ("Headline", "Crew rooms without the housing headache."),
+                ("Body", "A practical Davis base for contractors, project teams, and traveling workers who need the essentials handled between workdays."),
+                ("Primary CTA", "Check Live Availability"),
+                ("Secondary CTA", "Contact The Lodge"),
+                ("Image alt text", "Guest room at Alpine Lodge for crews working near Davis, West Virginia"),
+            ],
+        ),
+        (
+            "Positioning",
+            [
+                ("Eyebrow", "The short answer"),
+                ("Headline", "Working near Davis, Thomas, Canaan Valley, or Tucker County?"),
+                ("Paragraph 1", "Alpine Lodge gives crews a straightforward place to stay between workdays. Rooms include the practical basics workers use, and the lodge can discuss group booking options by phone."),
+                ("Paragraph 2", "Public room rates start at $99 on select dates. Current rates, room types, and availability depend on the dates and should be confirmed through direct booking or with the lodge."),
+            ],
+        ),
+        (
+            "Useful Amenities",
+            [
+                ("Eyebrow", "Useful between shifts"),
+                ("Headline", "The work-stay basics are already here."),
+                ("Body", "A private room, a place to keep food and drinks cold, and simple property amenities for resetting after the workday."),
+                ("Amenities", "Free Wi-Fi; In-room refrigerator; Private bathroom; Laundry machines; Ice machine; Irons and ironing boards; Flat-screen TV and DirecTV; Group booking options by phone"),
+            ],
+        ),
+        (
+            "Group Booking",
+            [
+                ("Eyebrow", "Booking several rooms?"),
+                ("Headline", "Call with the dates, room count, and expected length of stay."),
+                ("Body", "The lodge can confirm current availability and discuss group booking options. For a single room, the direct booking page is the fastest way to see live rates."),
+                ("CTA 1", "Call The Lodge"),
+                ("CTA 2", "Check Live Rates"),
+            ],
+        ),
+        (
+            "Business Traveler Review",
+            [
+                ("Eyebrow", "5/5 Google review from a business traveler"),
+                ("Headline", "A work stay described as quiet and a great value."),
+                ("Body", "The reviewer had planned a two-week stay for work before the job was cut short."),
+                ("Review", "This place was wonderful."),
+                ("Reviewer", "Bill Barowsky — 5/5 Google review"),
+            ],
+        ),
+        (
+            "Crew Stay FAQ",
+            [
+                ("Does Alpine Lodge accommodate contractors and work crews?", "Yes. Contractors, crews, and traveling workers can call Alpine Lodge to discuss room availability and group booking options for work in the Davis and Tucker County area."),
+                ("What room amenities are useful for a longer work stay?", "Rooms include free Wi-Fi, a refrigerator, private bathroom, flat-screen TV, and DirecTV. The property also has laundry machines, an ice machine, and irons and ironing boards."),
+                ("Are special group rates available for crews?", "Group booking options are available. Call Alpine Lodge with the work dates, number of rooms, and expected length of stay to discuss current options."),
+                ("How do I check current rates and availability?", "Use the direct Cloudbeds booking page for live public rates and availability, or call Alpine Lodge to discuss a multi-room crew stay."),
+            ],
+        ),
+    ]
+    add_page(doc, "Crew Lodging Page", {"title": "Crew & Extended-Stay Lodging in Davis WV", "description": "Practical Davis, WV lodging for contractors, crews, and traveling workers, with Wi-Fi, refrigerators, laundry machines, ice, and group booking options."}, crew_sections)
+    append_md_page(md, "Crew Lodging Page", {"title": "Crew & Extended-Stay Lodging in Davis WV", "description": "Practical Davis, WV lodging for contractors, crews, and traveling workers, with Wi-Fi, refrigerators, laundry machines, ice, and group booking options."}, crew_sections)
+
+    catalog_sections = [
+        (
+            "Hero",
+            [
+                ("Eyebrow", "Agent-readable lodge knowledge"),
+                ("Headline", "Alpine Lodge Knowledge Catalog"),
+                ("Body", "A structured source of truth for rooms, rate guidance, amenities, nearby attractions, pet-friendly lodging, policies, FAQs, and Davis trip planning."),
+                ("Primary CTA", "Reserve Now"),
+                ("Secondary CTA", "View Rate Guidance"),
+                ("Image alt text", "Alpine Lodge exterior in Davis, West Virginia"),
+            ],
+        ),
+        (
+            "Catalog Explanation",
+            [
+                ("Eyebrow", "What this catalog does"),
+                ("Headline", "It helps people and AI systems understand the lodge without guessing."),
+                ("Paragraph 1", "A practical, fair-priced Davis, WV basecamp for Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, Dolly Sods, hiking, skiing, food, music, and low-cost mountain weekends."),
+                ("Paragraph 2", "The catalog does not replace the website design. It gives the site a clearer structured layer for search, AI answer engines, trip planners, and future content updates."),
+                ("Freshness note", f"Catalog last updated: {data['catalogUpdated']}."),
+            ],
+        ),
+        (
+            "Catalog Sections",
+            [
+                ("Eyebrow", "Catalog sections"),
+                ("Headline", "The core lodging facts are now grouped into machine-readable categories."),
+                ("Body", "These are the facts guests tend to ask for before they book: room basics, rate guidance, activities, policies, and current-source guardrails."),
+            ] + [(item["name"], f"{item['summary']} CTA: Related page") for item in data["lodgingServices"]],
+        ),
+        (
+            "Rate Guidance",
+            [
+                ("Eyebrow", "Rate guidance"),
+                ("Headline", "Rates are explained clearly, but live pricing stays in the booking engine."),
+                ("Body", "The catalog keeps the public price signal clear while preventing stale or invented rate details."),
+            ] + [(item["name"], item["answer"]) for item in data["rateKnowledge"]],
+        ),
+        (
+            "Policy Facts",
+            [
+                ("Eyebrow", "Policy facts"),
+                ("Headline", "Guest policies are grouped where answer engines can find them."),
+                ("Body", "This helps keep answers grounded in the site instead of letting outside tools infer details."),
+            ] + [(item["name"], item["summary"]) for item in data["policyKnowledge"]],
+        ),
+        (
+            "Machine-Readable Files",
+            [
+                ("Eyebrow", "Machine-readable files"),
+                ("Headline", "Static files are available for crawlers and future workflows."),
+                ("Body", "The catalog is also published as JSON and Markdown files so non-Google AI tools can parse it without relying on visual page rendering."),
+                ("CTA 1", "Catalog JSON"),
+                ("CTA 2", "Lodging Markdown"),
+                ("CTA 3", "Check Live Rates"),
+            ],
+        ),
+    ]
+    add_page(doc, "Knowledge Catalog Page", {"title": "Knowledge Catalog", "description": "Structured Alpine Lodge lodging, rate, amenity, policy, FAQ, and Davis WV trip-planning knowledge for guests, search engines, and AI tools."}, catalog_sections)
+    append_md_page(md, "Knowledge Catalog Page", {"title": "Knowledge Catalog", "description": "Structured Alpine Lodge lodging, rate, amenity, policy, FAQ, and Davis WV trip-planning knowledge for guests, search engines, and AI tools."}, catalog_sections)
 
     location_sections = [
         (
@@ -621,8 +815,8 @@ def build_document(data):
         ),
         ("FAQ Items", [(faq["question"], faq["answer"]) for faq in data["faqs"]]),
     ]
-    add_page(doc, "FAQ Page", {"title": "FAQ", "description": "Answers about booking Alpine Lodge in Davis, WV, including pets, Wi-Fi, room amenities, check-in, ski access, Blackwater Falls, group bookings, and local planning."}, faq_sections)
-    append_md_page(md, "FAQ Page", {"title": "FAQ", "description": "Answers about booking Alpine Lodge in Davis, WV, including pets, Wi-Fi, room amenities, check-in, ski access, Blackwater Falls, group bookings, and local planning."}, faq_sections)
+    add_page(doc, "FAQ Page", {"title": "Davis WV Hotel FAQ: Pets, Wi-Fi & Policies", "description": "Answers about booking Alpine Lodge in Davis, WV, including pets, Wi-Fi, room amenities, check-in, ski access, Blackwater Falls, group bookings, and local planning."}, faq_sections)
+    append_md_page(md, "FAQ Page", {"title": "Davis WV Hotel FAQ: Pets, Wi-Fi & Policies", "description": "Answers about booking Alpine Lodge in Davis, WV, including pets, Wi-Fi, room amenities, check-in, ski access, Blackwater Falls, group bookings, and local planning."}, faq_sections)
 
     contact_sections = [
         (
@@ -657,6 +851,31 @@ def build_document(data):
     add_page(doc, "Contact Page", {"title": "Contact & Directions", "description": "Contact Alpine Lodge in Davis, WV. Find the address, phone, email, direct booking link, and directions for lodging near Blackwater Falls and Canaan Valley."}, contact_sections)
     append_md_page(md, "Contact Page", {"title": "Contact & Directions", "description": "Contact Alpine Lodge in Davis, WV. Find the address, phone, email, direct booking link, and directions for lodging near Blackwater Falls and Canaan Valley."}, contact_sections)
 
+    photo_credit_sections = [
+        (
+            "Hero",
+            [
+                ("Eyebrow", "Image sources"),
+                ("Headline", "Photo credits"),
+                ("Body", "Destination images help visitors see the real places around Alpine Lodge. External photographs are credited here with their original source and license where available."),
+                ("Primary CTA", "Reserve Now"),
+                ("Secondary CTA", "View Experiences"),
+                ("Image alt text", "Misty autumn road in Dolly Sods Wilderness"),
+            ],
+        ),
+        (
+            "Credits",
+            [
+                ("Dolly Sods autumn road", "Photo by Bold Frontiers. Creative Commons Attribution 3.0 Unported."),
+                ("East Avenue in Thomas, West Virginia", "Photo by Tim Kiser. Creative Commons Attribution-ShareAlike 2.5."),
+                ("White Grass Ski Touring Center", "Photo by White Grass Ski Touring Center. Used from the official experience provider website."),
+                ("Link labels", "Original Source; license name"),
+            ],
+        ),
+    ]
+    add_page(doc, "Photo Credits Page", {"title": "Photo Credits", "description": "Photo sources and Creative Commons attribution for destination images used on the Alpine Lodge website."}, photo_credit_sections)
+    append_md_page(md, "Photo Credits Page", {"title": "Photo Credits", "description": "Photo sources and Creative Commons attribution for destination images used on the Alpine Lodge website."}, photo_credit_sections)
+
     not_found_sections = [
         (
             "404 Page",
@@ -689,20 +908,17 @@ def build_document(data):
     add_page(doc, "Reference Links", None, partner_sections)
     append_md_page(md, "Reference Links", None, partner_sections)
 
-    llms_path = ROOT / "public" / "llms.txt"
-    if llms_path.exists():
-        llms_text = llms_path.read_text(encoding="utf-8")
-        llms_sections = [
-            (
-                "Public AI Search File",
-                [
-                    ("Path", "/llms.txt"),
-                    ("Copy", llms_text),
-                ],
+    ai_text_files = ["llms.txt", "lodging.md", "rates.md", "policies.md", "faq.md", "work-stays.md"]
+    ai_text_sections = []
+    for filename in ai_text_files:
+        source_path = ROOT / "public" / filename
+        if source_path.exists():
+            ai_text_sections.append(
+                (f"Public File: /{filename}", [("Copy", source_path.read_text(encoding="utf-8"))])
             )
-        ]
-        add_page(doc, "AI Search Copy", None, llms_sections)
-        append_md_page(md, "AI Search Copy", None, llms_sections)
+    if ai_text_sections:
+        add_page(doc, "AI Search Copy", None, ai_text_sections)
+        append_md_page(md, "AI Search Copy", None, ai_text_sections)
 
     doc.save(OUTPUT_DOCX)
     OUTPUT_MD.write_text("".join(md), encoding="utf-8")

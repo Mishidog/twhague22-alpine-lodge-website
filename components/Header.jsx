@@ -32,10 +32,14 @@ export function Header() {
           ))}
         </nav>
         <div className="header-actions">
-          <span className="rate-badge" aria-label="Rooms from 99 dollars on select dates when booking direct">
+          <Link
+            href="/rates"
+            className="rate-badge"
+            aria-label="View rooms from 99 dollars on select dates and current rate guidance"
+          >
             <strong>{rateSignal.eyebrow}</strong>
             <em>{rateSignal.headerNote}</em>
-          </span>
+          </Link>
           <BookingButton compact />
         </div>
       </div>

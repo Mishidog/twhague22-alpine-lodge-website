@@ -1,6 +1,6 @@
 # Alpine Lodge Lodging Knowledge
 
-Last updated: 2026-07-09
+Last updated: 2026-07-10
 
 Alpine Lodge is a practical lodging base in Davis, West Virginia for travelers visiting Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass Ski Touring Center, Thomas, Dolly Sods, and nearby Tucker County outdoor destinations.
 
@@ -24,6 +24,12 @@ Core message: book the room in Davis, then spend the trip outside on waterfalls,
 - Designated pet-friendly rooms
 - Direct Cloudbeds reservations
 
+## Crew And Longer Work Stays
+
+Alpine Lodge offers practical rooms for contractors, crews, project teams, and traveling workers who need lodging between workdays in the Davis and Tucker County area.
+
+Useful work-stay amenities include free Wi-Fi, in-room refrigerators, private bathrooms, laundry machines, an ice machine, irons and ironing boards, flat-screen TVs, and DirecTV. Group booking options are available by phone. Guests should call with the work dates, number of rooms, and expected length of stay to discuss current options.
+
 ## Nearby Destinations
 
 - Downtown Davis: about 2 minutes
@@ -42,5 +48,6 @@ Core message: book the room in Davis, then spend the trip outside on waterfalls,
 - Trip Guides: https://alpinelodgewva.com/trip-guides
 - Knowledge Catalog: https://alpinelodgewva.com/knowledge-catalog
 - Rates: https://alpinelodgewva.com/rates
+- Crew Lodging: https://alpinelodgewva.com/crew-lodging-davis-wv
 - FAQ: https://alpinelodgewva.com/faq
 - Contact: https://alpinelodgewva.com/contact

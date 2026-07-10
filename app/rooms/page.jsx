@@ -6,7 +6,7 @@ import { SectionIntro } from "@/components/SectionIntro";
 import { amenities, rooms } from "@/data/site";
 
 export const metadata = {
-  title: "Rooms",
+  title: "Davis WV Hotel Rooms & Amenities",
   description:
     "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options."
 };

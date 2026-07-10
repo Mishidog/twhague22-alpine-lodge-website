@@ -14,6 +14,21 @@
     ]
   },
   {
+    "id": "crew-lodging-davis-wv",
+    "name": "Crew and longer work-stay lodging",
+    "url": "/crew-lodging-davis-wv",
+    "summary": "Practical Davis, West Virginia rooms for contractors, crews, project teams, and traveling workers who need lodging between workdays in the Davis and Tucker County area.",
+    "includes": [
+      "Private bathroom",
+      "In-room refrigerator",
+      "Free Wi-Fi",
+      "Laundry machines",
+      "Ice machine",
+      "Irons and ironing boards",
+      "Group booking options by phone"
+    ]
+  },
+  {
     "id": "pet-friendly-lodging",
     "name": "Pet-friendly lodging",
     "url": "/experiences/pet-friendly-lodging-davis-wv",
