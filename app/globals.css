@@ -1213,6 +1213,38 @@ p {
   padding: 22px;
 }
 
+.room-gallery-section {
+  overflow: hidden;
+}
+
+.room-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 220px;
+  gap: 14px;
+}
+
+.room-gallery-image {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  background: var(--forest-deep);
+}
+
+.room-gallery-image img {
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.room-gallery-image:hover img {
+  transform: scale(1.035);
+}
+
+.room-gallery-image-1,
+.room-gallery-image-5 {
+  grid-row: span 2;
+}
+
 .booking-note {
   align-items: center;
   padding: 32px;
@@ -1684,6 +1716,7 @@ p {
   .review-grid,
   .amenity-grid,
   .room-detail-grid,
+  .room-gallery,
   .contact-grid,
   .link-grid,
   .partner-pill-grid {
@@ -1881,6 +1914,7 @@ p {
   .amenity-grid,
   .room-preview-grid,
   .room-detail-grid,
+  .room-gallery,
   .guide-grid,
   .contact-grid,
   .link-grid,

@@ -5,6 +5,33 @@ import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
 import { amenities, rooms } from "@/data/site";
 
+const roomGallery = [
+  {
+    src: "/images/alpine-lodge-king-room.jpg",
+    alt: "King guest room at Alpine Lodge with a window and seating area"
+  },
+  {
+    src: "/images/alpine-lodge-king-room-2.jpg",
+    alt: "King guest room at Alpine Lodge with bedside lamps"
+  },
+  {
+    src: "/images/alpine-lodge-two-queen-room.jpg",
+    alt: "Two-bed guest room at Alpine Lodge with a table and chairs"
+  },
+  {
+    src: "/images/alpine-lodge-queen-room.jpg",
+    alt: "Guest room at Alpine Lodge with a bed and work table"
+  },
+  {
+    src: "/images/alpine-lodge-three-bed-room.jpg",
+    alt: "Spacious Alpine Lodge guest room with three beds"
+  },
+  {
+    src: "/images/alpine-lodge-three-bed-room-2.jpg",
+    alt: "Three-bed Alpine Lodge guest room with flat-screen television"
+  }
+];
+
 export const metadata = {
   title: "Davis WV Hotel Rooms & Amenities",
   description:
@@ -18,8 +45,8 @@ export default function RoomsPage() {
         eyebrow="Rooms at Alpine Lodge"
         title="A Davis room for people who came to explore."
         copy="Private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly rooms give travelers the essentials between mountain days."
-        image="/images/alpine-lodge-room.jpg"
-        alt="Guest room at Alpine Lodge in Davis, WV"
+        image="/images/alpine-lodge-king-room.jpg"
+        alt="King guest room at Alpine Lodge in Davis, West Virginia"
         secondaryHref="/faq"
         secondary="Read FAQs"
       />
@@ -53,6 +80,27 @@ export default function RoomsPage() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+      <section className="section room-gallery-section">
+        <div className="container">
+          <SectionIntro
+            eyebrow="A closer look"
+            title="Rooms for a quick overnight or a whole mountain weekend."
+            copy="Room layouts and bedding vary. Check the live booking page for the available room type and current details for your dates."
+          />
+          <div className="room-gallery">
+            {roomGallery.map((image, index) => (
+              <figure key={image.src} className={`room-gallery-image room-gallery-image-${index + 1}`}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                />
+              </figure>
+            ))}
+          </div>
         </div>
       </section>
       <section className="section">

@@ -86,24 +86,24 @@ export const guestQuotes = [
 export const rooms = [
   {
     title: "Rooms For Mountain Trips",
-    image: "/images/alpine-lodge-room.jpg",
-    alt: "A guest room at Alpine Lodge in Davis, West Virginia",
+    image: "/images/alpine-lodge-king-room-2.jpg",
+    alt: "King guest room at Alpine Lodge in Davis, West Virginia",
     caption: "Where you crash after Dolly Sods, ski laps, waterfall walks, and late dinner in Davis.",
     description:
       "A place to shower, recharge, keep drinks cold, and sleep before the next Davis-area plan. Rooms include private bathroom, refrigerator, flat-screen TV, Wi-Fi, and DirecTV."
   },
   {
     title: "Designated Pet-Friendly Rooms",
-    image: "/images/alpine-lodge-exterior.jpg",
-    alt: "Alpine Lodge exterior in Davis, West Virginia",
+    image: "/images/alpine-lodge-two-queen-room.jpg",
+    alt: "Two-bed guest room at Alpine Lodge in Davis, West Virginia",
     caption: "A Davis landing spot when the dog is part of the road trip.",
     description:
       "Designated pet-friendly rooms help travelers bring the dog to Davis, Blackwater Falls, Canaan Valley, and Thomas. Confirm availability and current policy when booking."
   },
   {
     title: "Close To The Whole Weekend",
-    image: "/images/alpine-lodge-property.jpeg",
-    alt: "Alpine Lodge property near Davis attractions",
+    image: "/images/alpine-lodge-three-bed-room.jpg",
+    alt: "Spacious three-bed guest room at Alpine Lodge in Davis, West Virginia",
     caption: "Park here, sleep here, then point the day toward waterfalls, snow, trails, food, or music.",
     description:
       "Stay in Davis and keep the weekend flexible: Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, and downtown Davis are all within the trip plan."
