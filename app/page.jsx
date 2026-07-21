@@ -158,8 +158,8 @@ export default function HomePage() {
             </figure>
             <figure className="sequence-frame">
               <Image
-                src="/images/alpine-lodge-room.jpg"
-                alt="Guest room at Alpine Lodge in Davis, West Virginia"
+                src="/images/alpine-lodge-king-room.jpg"
+                alt="King guest room at Alpine Lodge in Davis, West Virginia"
                 fill
                 sizes="(max-width: 760px) 100vw, 29vw"
               />
