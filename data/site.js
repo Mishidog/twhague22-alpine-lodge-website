@@ -606,7 +606,7 @@ export const faqs = [
   },
   {
     question: "What are check-in and check-out times?",
-    answer: "Check-in is at 3pm and check-out is at 11am."
+    answer: "Check-in is at 4:00pm and check-out is at 11am."
   },
   {
     question: "Do you provide maps for hiking in the area?",
@@ -691,7 +691,7 @@ export function lodgingJsonLd() {
     telephone: site.phone,
     email: site.email,
     priceRange: "Rooms from $99 on select dates",
-    checkinTime: "15:00",
+    checkinTime: "16:00",
     checkoutTime: "11:00",
     sameAs: site.socials.map((social) => social.href),
     hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`,

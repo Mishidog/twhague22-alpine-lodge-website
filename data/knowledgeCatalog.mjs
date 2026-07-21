@@ -163,7 +163,7 @@ export const policyKnowledge = [
     id: "check-in-check-out",
     name: "Check-in and check-out",
     url: "/faq",
-    summary: "Check-in is at 3pm and check-out is at 11am.",
+    summary: "Check-in is at 4:00pm and check-out is at 11am.",
     publicNotes: [
       "Early check-in may be accommodated when possible.",
       "Early check-in depends on the day of week and current occupancy.",

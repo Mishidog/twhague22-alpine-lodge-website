@@ -370,7 +370,7 @@ This document organizes the current website copy by where it appears on the site
 - **Eyebrow:** Policy facts
 - **Headline:** Guest policies are grouped where answer engines can find them.
 - **Body:** This helps keep answers grounded in the site instead of letting outside tools infer details.
-- **Check-in and check-out:** Check-in is at 3pm and check-out is at 11am.
+- **Check-in and check-out:** Check-in is at 4:00pm and check-out is at 11am.
 - **Office hours:** The Alpine Lodge office is open from 3pm to 8pm.
 - **Pet-friendly rooms:** Designated pet-friendly rooms are available, but guests should book the right room type or call ahead.
 - **Cancellation policy:** The cancellation policy is 24 hours, except for holiday weekends. Guests should confirm the current policy when booking.
@@ -1100,7 +1100,7 @@ This document organizes the current website copy by where it appears on the site
 - **Do you have tour guides that you recommend?:** The front desk has a variety of local guides they can recommend.
 - **What restaurants in the area do you recommend?:** The front desk keeps current local restaurant recommendations and can help point you toward nearby options.
 - **Can I get an early check-in?:** Alpine Lodge tries to accommodate early check-in requests when possible. Availability depends on the day of the week and current occupancy.
-- **What are check-in and check-out times?:** Check-in is at 3pm and check-out is at 11am.
+- **What are check-in and check-out times?:** Check-in is at 4:00pm and check-out is at 11am.
 - **Do you provide maps for hiking in the area?:** Maps are available at the office. Alpine Lodge also recommends using hiking apps and checking current conditions before you go.
 - **Do you allow smoking in the rooms?:** No. Smoking is not allowed in the rooms.
 - **What is your cancellation policy?:** The cancellation policy is 24 hours, except for holiday weekends. Please confirm the current policy when booking.
@@ -1386,7 +1386,7 @@ Last updated: 2026-07-10
 
 ## Check-In And Check-Out
 
-Check-in is at 3pm and check-out is at 11am. Early check-in may be accommodated when possible, depending on day of week and current occupancy.
+Check-in is at 4:00pm and check-out is at 11am. Early check-in may be accommodated when possible, depending on day of week and current occupancy.
 
 ## Office Hours
 
@@ -1449,7 +1449,7 @@ Breakfast is not included at this time.
 
 ## What are check-in and check-out times?
 
-Check-in is at 3pm and check-out is at 11am.
+Check-in is at 4:00pm and check-out is at 11am.
 
 ## What is your cancellation policy?
 
@@ -1490,4 +1490,3 @@ Direct booking: https://hotels.cloudbeds.com/reservation/6qyVUk
 Rooms are advertised from $99 on select dates. Rates and availability change by date, season, room type, and demand. Do not assume weekly rates, monthly rates, truck parking, trailer parking, kitchenettes, invoicing, or other unlisted services. Confirm changing details directly with Alpine Lodge.
 
 Website page: https://alpinelodgewva.com/crew-lodging-davis-wv
-

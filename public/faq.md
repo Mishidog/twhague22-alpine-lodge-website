@@ -32,7 +32,7 @@ Breakfast is not included at this time.
 
 ## What are check-in and check-out times?
 
-Check-in is at 3pm and check-out is at 11am.
+Check-in is at 4:00pm and check-out is at 11am.
 
 ## What is your cancellation policy?
 
