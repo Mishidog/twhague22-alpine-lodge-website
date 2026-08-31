@@ -289,6 +289,30 @@ export const experiences = [
     ]
   },
   {
+    slug: "nrocks-via-ferrata-lodging",
+    title: "NROCKS Via Ferrata",
+    eyebrow: "Guided climbing & zip lines",
+    seoTitle: "Lodging Near NROCKS Via Ferrata | Alpine Lodge Davis WV",
+    description:
+      "Stay at Alpine Lodge in Davis, WV, about an hour from NROCKS Outdoor Adventures, home of the Via Ferrata, zip line canopy tour, and guided rock climbing.",
+    image: "/images/alpine-lodge-local-view.jpg",
+    alt: "Mountain scenery near Davis, West Virginia on the way to NROCKS",
+    distance: "about 1 hour from Alpine Lodge",
+    budget: "Paid guided adventure; reserve ahead",
+    bestFor: ["via ferrata", "climbing", "zip lines", "groups", "bucket-list days"],
+    season: "Check NROCKS for current tour dates and conditions",
+    officialLink: "https://nrocks.com/",
+    body: [
+      "NROCKS Outdoor Adventures is the big guided-adventure day within reach of Davis: a Via Ferrata climbing route across the famous Nelson Rocks fins, plus a zip line canopy tour and top-rope climbing. The scenic drive from Alpine Lodge runs through Canaan Valley and takes about an hour.",
+      "It pairs naturally with a Davis stay: sleep and eat in town at fair prices, spend the day on the rock, and come back to a straightforward room instead of paying adventure-resort lodging rates."
+    ],
+    tips: [
+      "Reserve your tour directly with NROCKS well in advance; guided spots fill up.",
+      "Confirm age, fitness, and weather requirements with NROCKS before you book.",
+      "Make it a full day: the drive over through Canaan Valley is part of the experience."
+    ]
+  },
+  {
     slug: "dolly-sods-weekend",
     title: "Dolly Sods Weekend",
     eyebrow: "Big views & wild terrain",
