@@ -313,6 +313,30 @@ export const experiences = [
     ]
   },
   {
+    slug: "cheat-river-rafting-lodging",
+    title: "Cheat River Rafting",
+    eyebrow: "Whitewater & river days",
+    seoTitle: "Lodging Near Cheat River Rafting | Alpine Lodge Davis WV",
+    description:
+      "Stay at Alpine Lodge in Davis, WV, about an hour and a quarter from Cheat River Outfitters in Albright, home of guided Cheat Canyon and Cheat Narrows whitewater rafting.",
+    image: "/images/fly-fishing-blackwater-river.jpg",
+    alt: "West Virginia river scenery near Davis and the Cheat River",
+    distance: "about 1 hour 15 minutes from Alpine Lodge",
+    budget: "Paid guided trip; reserve ahead",
+    bestFor: ["whitewater rafting", "groups", "adventure days", "spring trips", "families on the Narrows"],
+    season: "Spring high water for the Canyon; the Narrows runs through the warm months",
+    officialLink: "https://www.cheatriveroutfitters.com/",
+    body: [
+      "Cheat River Outfitters in Albright has been running guided whitewater since 1975. The big one is the Cheat Canyon: a 13-mile, 6-to-7-hour run of Class III-V rapids through a wilderness canyon, best in the spring melt from March into early June and again after heavy rain. For a shorter, easier day, the Class II-III Cheat Narrows runs as a half-day trip.",
+      "Davis makes a sensible base for it. Sleep and eat in town at fair prices, drive over for the river day, and come back to a straightforward room instead of paying adventure-resort rates."
+    ],
+    tips: [
+      "Book directly with Cheat River Outfitters and ask about water levels before you commit to a date.",
+      "The Canyon trip has an age minimum and an early departure; the Narrows is the better pick for younger or first-time paddlers.",
+      "Pack dry clothes, secured shoes, and a towel for the drive back to Davis."
+    ]
+  },
+  {
     slug: "dolly-sods-weekend",
     title: "Dolly Sods Weekend",
     eyebrow: "Big views & wild terrain",
