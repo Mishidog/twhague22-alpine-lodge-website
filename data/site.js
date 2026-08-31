@@ -337,6 +337,31 @@ export const experiences = [
     ]
   },
   {
+    slug: "mountain-biking-davis-wv",
+    title: "World Class Mountain Biking",
+    eyebrow: "Trails & bike weekends",
+    seoTitle: "Lodging Near World Class Mountain Biking | Alpine Lodge Davis WV",
+    description:
+      "Stay at Alpine Lodge in Davis, WV, directly across the street from Blackwater Bikes and minutes from the Canaan Valley, Plantation Trail, and Blackwater Falls singletrack that made this area a mountain biking destination.",
+    image: "/images/downtown-davis-wv.jpeg",
+    alt: "Downtown Davis, West Virginia, where Blackwater Bikes sits across the street from Alpine Lodge",
+    distance: "Blackwater Bikes is across the street; most trailheads are 5 to 20 minutes away",
+    budget: "Free trail access; paid rentals, service, and shop gear",
+    bestFor: ["mountain biking", "bike rentals", "singletrack", "gravel riding", "fall rides"],
+    season: "Late spring through fall, with the best dirt in summer and early autumn",
+    officialLink: "https://www.blackwaterbikes.com/",
+    body: [
+      "Davis sits in the middle of some of the best riding in the East. Rocky, rooty, high-elevation singletrack runs through the Canaan backcountry and Blackwater Falls State Park, Camp 70 Road and Canaan Loop Road open up long gravel days, and the trails around Canaan Valley and Timberline fill out everything in between. It is technical, it is scenic, and it rides nothing like the flow trails most visitors are used to.",
+      "Blackwater Bikes is directly across the street from Alpine Lodge. Alpine Lodge does not rent bikes, but the shop does, along with repairs, parts, and the current word on what is rideable that week. That is the whole reason this works as a base: park once, walk over for a rental or a tune, ride, then walk back to a room in town instead of driving in from somewhere else.",
+      "Put the savings into the trip. A fair-priced room in Davis leaves room in the budget for a rental, a shuttle day, dinner in town, and a second ride before you drive home."
+    ],
+    tips: [
+      "Stop in at Blackwater Bikes for current trail conditions before you commit to a route; the high country holds water and blowdown longer than people expect.",
+      "Bring more tire and more brake than you think you need. The rock here is real, and Plantation Trail is a slow, technical grind rather than a fast loop.",
+      "Cell service is thin once you are on the trails, so download maps and tell the front desk your plan for a long ride."
+    ]
+  },
+  {
     slug: "dolly-sods-weekend",
     title: "Dolly Sods Weekend",
     eyebrow: "Big views & wild terrain",
