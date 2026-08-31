@@ -639,6 +639,23 @@ export const homepageFaqs = homepageFaqQuestions
   .map((question) => faqs.find((faq) => faq.question === question))
   .filter(Boolean);
 
+export const localNews = {
+  intro:
+    "Country Roads News is an independent newsletter covering Davis, Thomas, and the rest of Tucker County. Worth a follow if you visit often — and worth a skim before a winter trip.",
+  items: [
+    {
+      name: "Davis Considers Partial Wintertime Downtown Parking Ban",
+      href: "https://countryroads.substack.com/p/davis-considers-partial-wintertime",
+      type: "Country Roads News · Aug 29, 2026"
+    },
+    {
+      name: "Country Roads News",
+      href: "https://countryroads.substack.com/",
+      type: "Local newsletter · Subscribe free"
+    }
+  ]
+};
+
 export const partnerLinks = [
   {
     name: "Blackwater Falls State Park",

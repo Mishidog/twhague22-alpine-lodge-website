@@ -2,7 +2,7 @@ import { Clock, ExternalLink, MapPinned } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
-import { distances, partnerLinks, site } from "@/data/site";
+import { distances, localNews, partnerLinks, site } from "@/data/site";
 
 export const metadata = {
   title: "Location",
@@ -71,6 +71,24 @@ export default function LocationPage() {
           />
           <div className="link-grid">
             {partnerLinks.map((link) => (
+              <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
+                <span>{link.type}</span>
+                <strong>{link.name}</strong>
+                <ExternalLink aria-hidden="true" size={17} />
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <SectionIntro
+            eyebrow="Local news"
+            title="What Davis is talking about right now."
+            copy={localNews.intro}
+          />
+          <div className="link-grid">
+            {localNews.items.map((link) => (
               <a key={link.href} href={link.href} target="_blank" rel="noopener noreferrer">
                 <span>{link.type}</span>
                 <strong>{link.name}</strong>
