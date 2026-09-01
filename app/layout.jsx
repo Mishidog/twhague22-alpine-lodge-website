@@ -4,6 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { lodgingJsonLd, site } from "@/data/site";
+import { Analytics } from "@vercel/analytics/next";
 
 const bodyFont = localFont({
   src: [
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
