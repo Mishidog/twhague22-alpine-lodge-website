@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { CookieNotice } from "@/components/CookieNotice";
 import { JsonLd } from "@/components/JsonLd";
 import { lodgingJsonLd, site } from "@/data/site";
+import { AnalyticsGate } from "@/components/AnalyticsGate";
 
 const bodyFont = localFont({
   src: [
@@ -69,6 +70,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <CookieNotice />
+        <AnalyticsGate />
       </body>
     </html>
   );

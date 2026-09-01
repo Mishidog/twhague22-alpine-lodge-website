@@ -19,8 +19,15 @@ export default function PrivacyPage() {
         <h3>Cookies</h3>
         <p>
           The Alpine Lodge website does not set tracking or advertising cookies.
-          We do not use analytics trackers, advertising pixels, or third-party
-          tracking scripts on this site.
+          We do not use advertising pixels or third-party tracking scripts on
+          this site.
+        </p>
+        <h3>Analytics</h3>
+        <p>
+          We use Vercel Web Analytics to count page visits so we know which
+          pages help travelers most. It is cookieless and does not identify you
+          personally or follow you across other websites. If you choose Decline
+          in the cookie notice, analytics is turned off for your visits.
         </p>
         <h3>Your cookie choice</h3>
         <p>
