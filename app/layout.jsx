@@ -2,6 +2,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { CookieNotice } from "@/components/CookieNotice";
 import { JsonLd } from "@/components/JsonLd";
 import { lodgingJsonLd, site } from "@/data/site";
 
@@ -67,6 +68,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <CookieNotice />
       </body>
     </html>
   );

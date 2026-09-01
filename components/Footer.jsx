@@ -63,6 +63,9 @@ export function Footer() {
             <li>
               <Link href="/photo-credits">Photo Credits</Link>
             </li>
+            <li>
+              <Link href="/privacy">Privacy &amp; Cookies</Link>
+            </li>
           </ul>
         </div>
         <div>
