@@ -1,12 +1,11 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { site } from "@/data/site";
 
 export function BookingButton({ children = "Reserve Now", className = "", compact = false }) {
   return (
     <Link
       className={`button button-primary ${compact ? "button-compact" : ""} ${className}`}
-      href={site.bookingUrl}
+      href="/book"
       target="_blank"
       rel="noopener noreferrer"
     >
