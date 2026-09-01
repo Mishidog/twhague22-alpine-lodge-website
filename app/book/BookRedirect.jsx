@@ -1,11 +1,14 @@
 "use client";
 
 import { useEffect } from "react";
+import { track } from "@vercel/analytics";
 import { site } from "@/data/site";
 
 // Brief stopover so the analytics pageview registers before leaving the site.
 export function BookRedirect() {
   useEffect(() => {
+    track("Booking Link Clicked");
+
     const timer = setTimeout(() => {
       window.location.replace(site.bookingUrl);
     }, 600);
