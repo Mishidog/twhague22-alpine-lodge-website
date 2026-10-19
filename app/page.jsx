@@ -34,7 +34,9 @@ import {
 } from "@/data/site";
 
 export const metadata = {
-  title: "Davis WV Lodging Near Blackwater Falls & Canaan Valley",
+  title: {
+    absolute: "Davis WV Lodging Near Blackwater Falls & Canaan Valley | Alpine Lodge"
+  },
   description:
     "Alpine Lodge offers Davis, WV rooms from $99 on select dates near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music."
 };

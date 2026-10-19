@@ -766,6 +766,34 @@ export function absoluteUrl(path = "") {
   return `${site.url}${path}`;
 }
 
+// The live site 308-redirects the apex host to www. Sitemap and robots must
+// advertise that canonical host even when NEXT_PUBLIC_SITE_URL is the apex.
+export function canonicalSiteUrl() {
+  const fallback = "https://www.alpinelodgewva.com";
+  try {
+    const url = new URL(site.url);
+    if (url.hostname === "alpinelodgewva.com") {
+      url.hostname = "www.alpinelodgewva.com";
+    }
+    return url.origin;
+  } catch {
+    return fallback;
+  }
+}
+
+export function formattedAddress() {
+  return `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`;
+}
+
+// The root layout appends "| Alpine Lodge". Titles that already name the
+// lodge should be absolute so the suffix is not repeated.
+export function pageTitle(title) {
+  if (typeof title === "string" && title.includes("Alpine Lodge")) {
+    return { absolute: title };
+  }
+  return title;
+}
+
 export function lodgingJsonLd() {
   const addressText = `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`;
 

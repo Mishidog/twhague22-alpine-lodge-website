@@ -1,37 +1,33 @@
-import { experiences, site, tripGuides } from "@/data/site";
+import { canonicalSiteUrl, experiences, tripGuides } from "@/data/site";
 
 export const dynamic = "force-static";
 
+const publicPages = [
+  "",
+  "/rooms",
+  "/rates",
+  "/crew-lodging-davis-wv",
+  "/location",
+  "/experiences",
+  "/trip-guides",
+  "/trip-planner",
+  "/knowledge-catalog",
+  "/faq",
+  "/contact",
+  "/photo-credits",
+  "/privacy"
+];
+
 export default function sitemap() {
+  const origin = canonicalSiteUrl();
   const routes = [
-    "",
-    "/rooms",
-    "/rates",
-    "/crew-lodging-davis-wv",
-    "/location",
-    "/experiences",
-    "/trip-guides",
-    "/trip-planner",
-    "/knowledge-catalog",
-    "/faq",
-    "/contact",
-    "/photo-credits",
-    "/catalog/knowledge-catalog.json",
-    "/catalog/lodging.json",
-    "/catalog/rates.json",
-    "/catalog/policies.json",
-    "/catalog/faqs.json",
-    "/lodging.md",
-    "/work-stays.md",
-    "/rates.md",
-    "/policies.md",
-    "/faq.md",
+    ...publicPages,
     ...experiences.map((item) => `/experiences/${item.slug}`),
     ...tripGuides.map((item) => `/trip-guides/${item.slug}`)
   ];
 
   return routes.map((route) => ({
-    url: `${site.url}${route}`,
+    url: `${origin}${route}`,
     lastModified: new Date(),
     changeFrequency: route === "" ? "weekly" : "monthly",
     priority: route === "" ? 1 : 0.8

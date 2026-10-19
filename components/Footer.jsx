@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
-import { nav, partnerLinks, site } from "@/data/site";
+import { formattedAddress, nav, partnerLinks, site } from "@/data/site";
 import { BookingButton } from "./BookingButton";
 
 const iconMap = {
@@ -42,7 +42,7 @@ export function Footer() {
             </a>
             <a href="/contact">
               <MapPin aria-hidden="true" size={17} />
-              {site.address.street}, {site.address.city}, {site.address.state}
+              {formattedAddress()}
             </a>
           </div>
         </div>

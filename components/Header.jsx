@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { MapPin, Menu, X } from "lucide-react";
-import { nav, rateSignal, site } from "@/data/site";
+import { formattedAddress, nav, rateSignal, site } from "@/data/site";
 import { BookingButton } from "./BookingButton";
 
 export function Header() {
@@ -15,7 +15,7 @@ export function Header() {
       <div className="top-strip">
         <span>
           <MapPin aria-hidden="true" size={15} />
-          850 Sawmill Lane, Davis, WV
+          {formattedAddress()}
         </span>
         <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
       </div>
