@@ -4,7 +4,7 @@ import { BookingButton } from "@/components/BookingButton";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
-import { experiences, site } from "@/data/site";
+import { experiences, pageTitle, site } from "@/data/site";
 
 export function generateStaticParams() {
   return experiences.map((item) => ({ slug: item.slug }));
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
   const item = experiences.find((experience) => experience.slug === slug);
   if (!item) return {};
   return {
-    title: item.seoTitle,
+    title: pageTitle(item.seoTitle),
     description: item.description,
     openGraph: {
       title: item.seoTitle,

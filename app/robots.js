@@ -1,4 +1,4 @@
-import { site } from "@/data/site";
+import { canonicalSiteUrl } from "@/data/site";
 
 export const dynamic = "force-static";
 
@@ -30,6 +30,6 @@ export default function robots() {
         allow: "/"
       }))
     ],
-    sitemap: `${site.url}/sitemap.xml`
+    sitemap: `${canonicalSiteUrl()}/sitemap.xml`
   };
 }

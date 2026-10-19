@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { BookingButton } from "@/components/BookingButton";
 import { JsonLd } from "@/components/JsonLd";
-import { tripGuides, site } from "@/data/site";
+import { pageTitle, site, tripGuides } from "@/data/site";
 
 export function generateStaticParams() {
   return tripGuides.map((item) => ({ slug: item.slug }));
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
   const guide = tripGuides.find((item) => item.slug === slug);
   if (!guide) return {};
   return {
-    title: guide.seoTitle,
+    title: pageTitle(guide.seoTitle),
     description: guide.description,
     openGraph: {
       title: guide.seoTitle,
