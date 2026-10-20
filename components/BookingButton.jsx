@@ -4,10 +4,17 @@ import Link from "next/link";
 import { track } from "@vercel/analytics";
 import { ArrowUpRight } from "lucide-react";
 
-export function BookingButton({ children = "Reserve Now", className = "", compact = false }) {
+export function BookingButton({
+  children = "Reserve Now",
+  className = "",
+  compact = false,
+  variant = "secondary"
+}) {
+  const tone = variant === "primary" ? "button-primary" : "button-secondary";
+
   return (
     <Link
-      className={`button button-primary ${compact ? "button-compact" : ""} ${className}`}
+      className={`button ${tone} ${compact ? "button-compact" : ""} ${className}`}
       href="/book"
       target="_blank"
       rel="noopener noreferrer"

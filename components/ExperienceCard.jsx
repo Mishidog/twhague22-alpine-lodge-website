@@ -24,7 +24,7 @@ export function ExperienceCard({ item, hrefPrefix = "/experiences", compact = fa
             </span>
           </div>
         )}
-        <span className="text-link">
+        <span className={compact ? "link-cta" : "text-link"}>
           {compact ? "View details" : "Plan this trip"} <ArrowRight aria-hidden="true" size={16} />
         </span>
       </div>

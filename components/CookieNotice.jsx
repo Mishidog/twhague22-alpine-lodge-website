@@ -36,16 +36,14 @@ export function CookieNotice() {
   return (
     <div className="cookie-notice" role="region" aria-label="Cookie notice">
       <p>
-        Alpine Lodge does not use tracking cookies. Your choice here is saved in
-        your browser so future site features can respect it. Booking runs on
-        Cloudbeds, which has its own policy.{" "}
+        Alpine Lodge does not use tracking cookies, and your choice is saved in this browser.{" "}
         <Link href="/privacy">Privacy &amp; Cookies</Link>
       </p>
       <div className="cookie-notice-actions">
-        <button type="button" className="button button-secondary" onClick={() => choose("declined")}>
+        <button type="button" onClick={() => choose("declined")}>
           Decline
         </button>
-        <button type="button" className="button button-primary" onClick={() => choose("accepted")}>
+        <button type="button" onClick={() => choose("accepted")}>
           Accept
         </button>
       </div>
