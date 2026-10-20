@@ -30,6 +30,7 @@ import {
   homepageFaqs,
   rateSignal,
   rooms,
+  site,
   tripGuides
 } from "@/data/site";
 
@@ -93,12 +94,12 @@ export default function HomePage() {
             skiing, food, music, and mountain air.
           </p>
           <div className="hero-actions">
-            <BookingButton>Reserve Your Room</BookingButton>
+            <BookingButton variant="primary">Reserve Your Room</BookingButton>
             <SecondaryLink href="/experiences">Explore The Area</SecondaryLink>
           </div>
           <div className="hero-facts" aria-label="Alpine Lodge highlights">
-            {highlights.slice(0, 4).map((item) => (
-              <span key={item}>
+            {highlights.slice(0, 4).map((item, index) => (
+              <span key={item} className={index < 2 ? "hero-chip-extra" : undefined}>
                 <CheckCircle2 aria-hidden="true" size={16} />
                 {item}
               </span>
@@ -224,7 +225,9 @@ export default function HomePage() {
             ))}
           </div>
           <div className="section-actions">
-            <SecondaryLink href="/experiences">See All Experiences</SecondaryLink>
+            <Link className="link-cta" href="/experiences">
+              See All Experiences
+            </Link>
           </div>
         </div>
       </section>
@@ -389,7 +392,7 @@ export default function HomePage() {
                 <p>{faq.answer}</p>
               </details>
             ))}
-            <Link className="text-link" href="/faq">
+            <Link className="link-cta" href="/faq">
               Read all FAQs
             </Link>
           </div>
@@ -404,7 +407,12 @@ export default function HomePage() {
             Reserve Alpine Lodge, then build the trip around waterfalls, ski areas,
             trails, music, food, and the people you came with.
           </p>
-          <BookingButton>Reserve Now</BookingButton>
+          <div className="hero-actions">
+            <BookingButton variant="primary">Reserve Now</BookingButton>
+            <a className="button button-secondary" href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>
+              {site.phone}
+            </a>
+          </div>
         </div>
       </section>
     </>

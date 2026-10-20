@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { formattedAddress, nav, partnerLinks, site } from "@/data/site";
-import { BookingButton } from "./BookingButton";
-
 const iconMap = {
   Instagram,
   Facebook,
@@ -13,17 +11,6 @@ const iconMap = {
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="footer-cta">
-        <div>
-          <p className="eyebrow">Ready for Davis?</p>
-          <h2>Book the Davis room. Spend the trip outside.</h2>
-          <p>
-            Use Alpine Lodge for Blackwater Falls, Canaan Valley, Timberline,
-            Thomas, and nearby Tucker County stops.
-          </p>
-        </div>
-        <BookingButton>Check Availability</BookingButton>
-      </div>
       <div className="footer-grid">
         <div>
           <h3>Alpine Lodge</h3>
