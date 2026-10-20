@@ -289,7 +289,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="hub-map" aria-label="Alpine Lodge hub map">
-            <span className="hub-center">Alpine Lodge<br />Davis, WV</span>
+            <span className="hub-center">Alpine Lodge<span className="hub-center-sep"></span>Davis, WV</span>
             <span className="hub-node node-one">Blackwater Falls<br /><em>~5 min</em></span>
             <span className="hub-node node-two">Thomas<br /><em>~10 min</em></span>
             <span className="hub-node node-three">Canaan Valley<br /><em>~15 min</em></span>
