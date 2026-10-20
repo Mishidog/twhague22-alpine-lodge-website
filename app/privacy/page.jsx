@@ -1,11 +1,12 @@
 import { SectionIntro } from "@/components/SectionIntro";
-import { site } from "@/data/site";
+import { pageMetadata, phoneTelHref, site } from "@/data/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Privacy & Cookies",
   description:
-    "How the Alpine Lodge website in Davis, WV handles cookies, browser storage, and visitor privacy."
-};
+    "How the Alpine Lodge website in Davis, WV handles cookies, browser storage, and visitor privacy.",
+  path: "/privacy"
+});
 
 export default function PrivacyPage() {
   return (
@@ -15,6 +16,7 @@ export default function PrivacyPage() {
           eyebrow="Privacy & cookies"
           title="Short version: this site does not track you."
           copy="Here is exactly what this website does and does not do with your information."
+          heading="h1"
         />
         <h3>Cookies</h3>
         <p>
@@ -51,7 +53,7 @@ export default function PrivacyPage() {
         <h3>Questions</h3>
         <p>
           Contact us at <a href={`mailto:${site.email}`}>{site.email}</a> or{" "}
-          <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>.
+          <a href={phoneTelHref()}>{site.phone}</a>.
         </p>
       </div>
     </section>

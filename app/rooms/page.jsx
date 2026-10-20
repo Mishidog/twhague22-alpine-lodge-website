@@ -3,7 +3,7 @@ import { CheckCircle2 } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
-import { amenities, rooms } from "@/data/site";
+import { amenities, pageMetadata, rooms } from "@/data/site";
 
 const roomGallery = [
   {
@@ -32,11 +32,12 @@ const roomGallery = [
   }
 ];
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Davis WV Hotel Rooms & Amenities",
   description:
-    "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options."
-};
+    "Book Davis, WV rooms at Alpine Lodge with private bathroom, refrigerator, flat-screen TV, Wi-Fi, DirecTV, and designated pet-friendly options.",
+  path: "/rooms"
+});
 
 export default function RoomsPage() {
   return (

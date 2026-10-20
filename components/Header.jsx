@@ -5,13 +5,13 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { MapPin, Menu, Phone, X } from "lucide-react";
-import { formattedAddress, nav, rateSignal, site } from "@/data/site";
+import { formattedAddress, nav, phoneTelHref, rateSignal, site } from "@/data/site";
 import { BookingButton } from "./BookingButton";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
-  const phoneHref = `tel:${site.phone.replace(/[^+\d]/g, "")}`;
+  const phoneHref = phoneTelHref();
 
   return (
     <header className="site-header">

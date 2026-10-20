@@ -2,13 +2,14 @@ import { Clock, ExternalLink, MapPinned } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
-import { distances, localNews, partnerLinks, site } from "@/data/site";
+import { distances, formattedAddress, localNews, mapUrl, pageMetadata, partnerLinks } from "@/data/site";
 
-export const metadata = {
-  title: "Location",
+export const metadata = pageMetadata({
+  title: "Where Is Alpine Lodge? Davis WV Map & Drive Times",
   description:
-    "Stay at Alpine Lodge in Davis, WV, about 5 minutes from Blackwater Falls, 15 minutes from Canaan Valley, and 20 minutes from Timberline and White Grass."
-};
+    "Stay at Alpine Lodge in Davis, WV, about 5 minutes from Blackwater Falls, 15 minutes from Canaan Valley, and 20 minutes from Timberline and White Grass.",
+  path: "/location"
+});
 
 export default function LocationPage() {
   return (
@@ -26,7 +27,7 @@ export default function LocationPage() {
         <div className="container location-panel">
           <div>
             <p className="eyebrow">Address</p>
-            <h2>{site.address.street}, {site.address.city}, {site.address.state} {site.address.postalCode}</h2>
+            <h2>{formattedAddress()}</h2>
             <p>
               Use Alpine Lodge as the Davis center point for Blackwater Falls,
               Canaan Valley, Timberline Mountain, White Grass, Thomas, and downtown Davis.
@@ -34,9 +35,7 @@ export default function LocationPage() {
             <div className="hero-actions">
               <a
                 className="button button-secondary"
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                  `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`
-                )}`}
+                href={mapUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -3,6 +3,7 @@ import { BookingButton, SecondaryLink } from "@/components/BookingButton";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
+import { pageMetadata } from "@/data/site";
 import {
   catalogUpdated,
   knowledgeCatalog,
@@ -12,11 +13,12 @@ import {
   rateKnowledge
 } from "@/data/knowledgeCatalog.mjs";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Knowledge Catalog",
   description:
-    "Structured Alpine Lodge lodging, rate, amenity, policy, FAQ, and Davis WV trip-planning knowledge for guests, search engines, and AI tools."
-};
+    "Structured Alpine Lodge lodging, rate, amenity, policy, FAQ, and Davis WV trip-planning knowledge for guests, search engines, and AI tools.",
+  path: "/knowledge-catalog"
+});
 
 export default function KnowledgeCatalogPage() {
   return (

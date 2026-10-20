@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
-import { formattedAddress, nav, partnerLinks, site } from "@/data/site";
+import { formattedAddress, nav, partnerLinks, phoneTelHref, site } from "@/data/site";
 const iconMap = {
   Instagram,
   Facebook,
@@ -19,7 +19,7 @@ export function Footer() {
             who came for waterfalls, trails, skiing, food, music, and mountain air.
           </p>
           <div className="contact-stack">
-            <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>
+            <a href={phoneTelHref()}>
               <Phone aria-hidden="true" size={17} />
               {site.phone}
             </a>

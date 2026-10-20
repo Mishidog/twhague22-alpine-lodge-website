@@ -3,10 +3,16 @@
   "lastUpdated": "2026-07-10",
   "organization": {
     "name": "Alpine Lodge",
-    "url": "https://alpinelodgewva.com",
+    "url": "https://www.alpinelodgewva.com",
     "bookingUrl": "https://hotels.cloudbeds.com/reservation/6qyVUk",
-    "phone": "+1 304-259-5245",
+    "phone": "304-259-5245",
     "email": "office@alpinelodgewva.com",
+    "sameAs": [
+      "https://www.instagram.com/alpinelodgewva/",
+      "https://www.facebook.com/profile.php?id=100054325968937",
+      "https://www.tiktok.com/@alpine.lodge",
+      "https://www.youtube.com/@alpinelodgewv"
+    ],
     "address": "850 Sawmill Lane, Davis, WV 26260",
     "positioning": "A practical, fair-priced Davis, WV basecamp for Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, Dolly Sods, hiking, skiing, food, music, and low-cost mountain weekends.",
     "priceSignal": "Rooms from $99 on select dates, with live rates before you reserve.",

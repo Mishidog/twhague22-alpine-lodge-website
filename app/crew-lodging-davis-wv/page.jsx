@@ -4,13 +4,14 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { ReviewCard } from "@/components/ReviewCard";
 import { SectionIntro } from "@/components/SectionIntro";
-import { guestQuotes, site } from "@/data/site";
+import { guestQuotes, pageMetadata, phoneTelHref, site } from "@/data/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Crew & Extended-Stay Lodging in Davis WV",
   description:
-    "Practical Davis, WV lodging for contractors, crews, and traveling workers, with Wi-Fi, refrigerators, laundry machines, ice, and group booking options."
-};
+    "Practical Davis, WV lodging for contractors, crews, and traveling workers, with Wi-Fi, refrigerators, laundry machines, ice, and group booking options.",
+  path: "/crew-lodging-davis-wv"
+});
 
 const crewAmenities = [
   "Free Wi-Fi",
@@ -47,7 +48,7 @@ const crewFaqs = [
 ];
 
 export default function CrewLodgingPage() {
-  const phoneHref = `tel:${site.phone.replace(/[^+\d]/g, "")}`;
+  const phoneHref = phoneTelHref();
   const workStayQuote = guestQuotes.find((quote) => quote.segment === "work");
   const faqJson = {
     "@context": "https://schema.org",

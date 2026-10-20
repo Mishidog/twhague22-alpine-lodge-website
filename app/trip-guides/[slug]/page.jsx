@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import { BookingButton } from "@/components/BookingButton";
 import { JsonLd } from "@/components/JsonLd";
-import { pageTitle, site, tripGuides } from "@/data/site";
+import { canonicalUrl, pageMetadata, site, tripGuides } from "@/data/site";
 
 export function generateStaticParams() {
   return tripGuides.map((item) => ({ slug: item.slug }));
@@ -12,15 +12,16 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const guide = tripGuides.find((item) => item.slug === slug);
   if (!guide) return {};
-  return {
-    title: pageTitle(guide.seoTitle),
+  return pageMetadata({
+    title: guide.seoTitle,
     description: guide.description,
+    path: `/trip-guides/${guide.slug}`,
     openGraph: {
       title: guide.seoTitle,
       description: guide.description,
       images: [{ url: guide.image }]
     }
-  };
+  });
 }
 
 export default async function TripGuideDetailPage({ params }) {
@@ -33,7 +34,8 @@ export default async function TripGuideDetailPage({ params }) {
     "@type": "Article",
     headline: guide.title,
     description: guide.description,
-    image: `${site.url}${guide.image}`,
+    image: canonicalUrl(guide.image),
+    url: canonicalUrl(`/trip-guides/${guide.slug}`),
     author: {
       "@type": "Organization",
       name: site.name
@@ -49,7 +51,7 @@ export default async function TripGuideDetailPage({ params }) {
       <JsonLd data={jsonLd} />
       <section className="guide-hero">
         <div className="guide-hero-image">
-          <Image src={guide.image} alt="" fill sizes="100vw" priority />
+          <Image src={guide.image} alt={guide.alt} fill sizes="100vw" priority />
         </div>
         <div className="guide-hero-content">
           <p className="eyebrow">Trip guide</p>

@@ -1,11 +1,15 @@
 import { TripPlanner } from "@/components/TripPlanner";
 import { BookingButton } from "@/components/BookingButton";
+import { pageMetadata } from "@/data/site";
 
-export const metadata = {
-  title: "Davis WV Trip Planner",
+export const metadata = pageMetadata({
+  title: {
+    absolute: "Free Davis WV Trip Planner | Blackwater Falls & Canaan Valley"
+  },
   description:
-    "Plan a Davis, WV trip with Alpine Lodge as the room for Blackwater Falls, Canaan Valley, Timberline Mountain, Thomas, hiking, skiing, food, and music."
-};
+    "Plan a Davis, WV trip with Alpine Lodge as the room for Blackwater Falls, Canaan Valley, Timberline Mountain, Thomas, hiking, skiing, food, and music.",
+  path: "/trip-planner"
+});
 
 export default function TripPlannerPage() {
   return (

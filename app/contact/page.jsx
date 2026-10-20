@@ -1,18 +1,17 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { BookingButton } from "@/components/BookingButton";
 import { PageHero } from "@/components/PageHero";
-import { site } from "@/data/site";
+import { formattedAddress, mapUrl, pageMetadata, phoneTelHref, site } from "@/data/site";
 
-export const metadata = {
-  title: "Contact & Directions",
+export const metadata = pageMetadata({
+  title: "Contact Alpine Lodge, Davis WV | 304-259-5245 & Directions",
   description:
-    "Contact Alpine Lodge in Davis, WV. Find the address, phone, email, direct booking link, and directions for lodging near Blackwater Falls and Canaan Valley."
-};
+    "Contact Alpine Lodge in Davis, WV. Find the address, phone, email, direct booking link, and directions for lodging near Blackwater Falls and Canaan Valley.",
+  path: "/contact"
+});
 
 export default function ContactPage() {
-  const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`
-  )}`;
+  const mapHref = mapUrl();
 
   return (
     <>
@@ -30,13 +29,9 @@ export default function ContactPage() {
           <a href={mapHref} target="_blank" rel="noopener noreferrer" className="contact-card">
             <MapPin aria-hidden="true" size={24} />
             <span>Address</span>
-            <strong>
-              {site.address.street}
-              <br />
-              {site.address.city}, {site.address.state} {site.address.postalCode}
-            </strong>
+            <strong>{formattedAddress()}</strong>
           </a>
-          <a href={`tel:${site.phone.replace(/[^+\d]/g, "")}`} className="contact-card">
+          <a href={phoneTelHref()} className="contact-card">
             <Phone aria-hidden="true" size={24} />
             <span>Phone</span>
             <strong>{site.phone}</strong>
