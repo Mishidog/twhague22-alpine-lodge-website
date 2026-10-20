@@ -19,7 +19,7 @@ Alpine Lodge offers practical Davis, West Virginia lodging for contractors, crew
 
 Group booking options are available by phone. Call Alpine Lodge with the work dates, number of rooms, and expected length of stay to discuss current room availability and options.
 
-Phone: +1 304-259-5245
+Phone: 304-259-5245
 
 For a single room, use the direct Cloudbeds booking page to check live public rates, room types, and availability.
 

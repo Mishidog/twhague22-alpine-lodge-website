@@ -1170,6 +1170,41 @@ p {
   padding: 0 0 18px;
 }
 
+.faq-groups {
+  display: grid;
+  gap: 42px;
+}
+
+.faq-group {
+  display: grid;
+  gap: 14px;
+}
+
+.faq-group > h2 {
+  font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+  margin-bottom: 4px;
+}
+
+.faq-entry {
+  background: rgba(247, 241, 228, 0.72);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px 18px 16px;
+}
+
+.faq-entry h3 {
+  font-family: var(--sans);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.faq-entry p {
+  margin: 0;
+  max-width: 70ch;
+}
+
 .compact-faq .text-link,
 .compact-faq .link-cta {
   margin-top: 10px;
@@ -2364,6 +2399,10 @@ body:has(.cookie-notice) .home-hero .hero-content {
   .main-nav {
     gap: 28px;
   }
+}
+
+.legal-copy h1 {
+  margin-bottom: 0.35rem;
 }
 
 .legal-copy h3 {

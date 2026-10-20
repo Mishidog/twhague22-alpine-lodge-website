@@ -1,4 +1,17 @@
-import { amenities, distances, experiences, faqs, partnerLinks, rateSignal, rooms, site, tripGuides } from "./site.js";
+import {
+  amenities,
+  canonicalSiteUrl,
+  canonicalUrl,
+  distances,
+  experiences,
+  faqs,
+  lodgingBusinessCore,
+  partnerLinks,
+  rateSignal,
+  rooms,
+  site,
+  tripGuides
+} from "./site.js";
 
 export const catalogUpdated = "2026-07-10";
 
@@ -222,10 +235,11 @@ export const knowledgeCatalog = {
   lastUpdated: catalogUpdated,
   organization: {
     name: site.name,
-    url: site.url,
+    url: canonicalSiteUrl(),
     bookingUrl: site.bookingUrl,
     phone: site.phone,
     email: site.email,
+    sameAs: site.socials.map((social) => social.href),
     address: `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`,
     positioning:
       "A practical, fair-priced Davis, WV basecamp for Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, Dolly Sods, hiking, skiing, food, music, and low-cost mountain weekends.",
@@ -282,26 +296,11 @@ export function lodgingCatalogJsonLd() {
       {
         "@type": "Dataset",
         name: "Alpine Lodge Knowledge Catalog",
-        url: `${site.url}/knowledge-catalog`,
+        url: canonicalUrl("/knowledge-catalog"),
         dateModified: catalogUpdated,
         about: lodgingServices.map((service) => service.name)
       },
-      {
-        "@type": "LodgingBusiness",
-        "@id": `${site.url}/#hotel`,
-        name: site.name,
-        url: site.url,
-        telephone: site.phone,
-        email: site.email,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: site.address.street,
-          addressLocality: site.address.city,
-          addressRegion: site.address.state,
-          postalCode: site.address.postalCode,
-          addressCountry: "US"
-        }
-      }
+      lodgingBusinessCore()
     ]
   };
 }

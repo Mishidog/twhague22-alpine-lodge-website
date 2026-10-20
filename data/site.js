@@ -4,7 +4,7 @@ export const site = {
   bookingUrl:
     process.env.NEXT_PUBLIC_BOOKING_URL ||
     "https://hotels.cloudbeds.com/reservation/6qyVUk",
-  phone: "+1 304-259-5245",
+  phone: "304-259-5245",
   email: "office@alpinelodgewva.com",
   address: {
     street: "850 Sawmill Lane",
@@ -244,7 +244,7 @@ export const experiences = [
     slug: "timberline-mountain-lodging",
     title: "Timberline Mountain Lodging",
     eyebrow: "Downhill ski weekends",
-    seoTitle: "Lodging Near Timberline Mountain | Budget Hotel in Davis WV",
+    seoTitle: "Lodging Near Timberline Mountain, Davis WV | Alpine Lodge",
     description:
       "Stay at Alpine Lodge in Davis, about 20 minutes from Timberline Mountain skiing, snowboarding, lift-served mountain days, and winter weekends.",
     image: "/images/dolly-sods-autumn-road.jpg",
@@ -468,6 +468,7 @@ export const tripGuides = [
     description:
       "Plan a Davis, WV weekend around Alpine Lodge, Blackwater Falls, local food, scenic drives, Thomas, and free or low-cost outdoor time.",
     image: "/images/downtown-davis-wv.jpeg",
+    alt: "Downtown Davis, West Virginia near Alpine Lodge",
     audience: "Couples, friends, and families who want a real mountain weekend without resort pricing.",
     days: [
       {
@@ -503,6 +504,7 @@ export const tripGuides = [
     description:
       "Use Alpine Lodge for a Davis, WV ski weekend near Timberline Mountain, Canaan Valley, and White Grass without making lodging the biggest line item.",
     image: "/images/alpine-lodge-three-bed-room-2.jpg",
+    alt: "Three-bed Alpine Lodge guest room with flat-screen television",
     audience: "Skiers, snowboarders, Nordic skiers, and groups trying to keep the trip affordable.",
     days: [
       {
@@ -538,6 +540,7 @@ export const tripGuides = [
     description:
       "A rainy-day guide for Davis and Thomas visitors staying at Alpine Lodge, with food, music, shops, galleries, scenic drives, and indoor resets.",
     image: "/images/alpine-lodge-office.jpg",
+    alt: "Alpine Lodge office in Davis, West Virginia",
     audience: "Visitors who still want a good trip when the weather changes.",
     days: [
       {
@@ -565,6 +568,7 @@ export const tripGuides = [
     description:
       "Plan a pet-friendly Davis, WV mountain weekend with designated Alpine Lodge pet rooms, outdoor stops, scenic drives, and travel tips.",
     image: "/images/alpine-lodge-queen-room.jpg",
+    alt: "Guest room at Alpine Lodge with a bed and work table",
     audience: "Travelers bringing a dog to Davis, Blackwater Falls, Canaan Valley, or Thomas.",
     days: [
       {
@@ -587,119 +591,141 @@ export const tripGuides = [
   }
 ];
 
-export const faqs = [
+export const faqGroups = [
   {
-    question: "How do I book a room at Alpine Lodge?",
-    answer:
-      "Use the Reserve Now button on this site to book directly through the current Cloudbeds reservation system."
+    title: "Booking",
+    items: [
+      {
+        question: "How do I book a room at Alpine Lodge?",
+        answer:
+          "Use the Reserve Now button on this site to book directly through the current Cloudbeds reservation system."
+      },
+      {
+        question: "Can I get an early check-in?",
+        answer:
+          "Alpine Lodge tries to accommodate early check-in requests when possible. Availability depends on the day of the week and current occupancy."
+      },
+      {
+        question: "What are check-in and check-out times?",
+        answer: "Check-in is at 4:00pm and check-out is at 11am."
+      },
+      {
+        question: "What are the Alpine Lodge office hours?",
+        answer: "The Alpine Lodge office is open from 3pm to 8pm."
+      },
+      {
+        question: "What is your cancellation policy?",
+        answer:
+          "The cancellation policy is 24 hours, except for holiday weekends. Please confirm the current policy when booking."
+      },
+      {
+        question: "Do you offer discounts for group bookings?",
+        answer: "Yes. Please call Alpine Lodge to discuss group booking options."
+      }
+    ]
   },
   {
-    question: "What are the Sawmill Restaurant hours of operation?",
-    answer: "The Sawmill Restaurant is currently closed."
+    title: "Rooms",
+    items: [
+      {
+        question: "Do the rooms have refrigerators?",
+        answer: "Yes. Rooms include a refrigerator, private bathroom, flat-screen TV, Wi-Fi, and DirecTV."
+      },
+      {
+        question: "Do you have irons and ironing boards in the rooms?",
+        answer: "Yes. Irons and ironing boards are available."
+      },
+      {
+        question: "Is there an ice machine in the hotel?",
+        answer: "Yes. Alpine Lodge has an ice machine."
+      },
+      {
+        question: "Do you have laundry machines?",
+        answer: "Yes. Laundry machines are available."
+      },
+      {
+        question: "Do the rooms have coffee makers?",
+        answer: "Coffee makers are available at the front desk."
+      },
+      {
+        question: "Does the hotel have Wi-Fi?",
+        answer: "Yes. Alpine Lodge offers free Wi-Fi for guests."
+      },
+      {
+        question: "Is breakfast included?",
+        answer: "Breakfast is not included at this time."
+      },
+      {
+        question: "Do you allow smoking in the rooms?",
+        answer: "No. Smoking is not allowed in the rooms."
+      }
+    ]
   },
   {
-    question: "What are the Alpine Lodge office hours?",
-    answer: "The Alpine Lodge office is open from 3pm to 8pm."
+    title: "Pets",
+    items: [
+      {
+        question: "Is the hotel pet friendly?",
+        answer:
+          "Yes. Alpine Lodge has designated pet-friendly rooms. Please book the right room type or call ahead to confirm availability."
+      }
+    ]
   },
   {
-    question: "What is the Alpine Lodge address?",
-    answer: "Alpine Lodge is located at 850 Sawmill Lane, Davis, WV 26260."
-  },
-  {
-    question: "Is Alpine Lodge close to Blackwater Falls?",
-    answer:
-      "Yes. Alpine Lodge is in Davis, about 5 minutes from Blackwater Falls State Park."
-  },
-  {
-    question: "How far is Alpine Lodge from the local ski areas?",
-    answer:
-      "The local ski areas are about 10 miles from Alpine Lodge. Drive times can vary with weather, traffic, and winter road conditions."
-  },
-  {
-    question: "Is the hotel pet friendly?",
-    answer:
-      "Yes. Alpine Lodge has designated pet-friendly rooms. Please book the right room type or call ahead to confirm availability."
-  },
-  {
-    question: "Do the rooms have refrigerators?",
-    answer: "Yes. Rooms include a refrigerator, private bathroom, flat-screen TV, Wi-Fi, and DirecTV."
-  },
-  {
-    question: "Do you have irons and ironing boards in the rooms?",
-    answer: "Yes. Irons and ironing boards are available."
-  },
-  {
-    question: "Is there an ice machine in the hotel?",
-    answer: "Yes. Alpine Lodge has an ice machine."
-  },
-  {
-    question: "Do you have laundry machines?",
-    answer: "Yes. Laundry machines are available."
-  },
-  {
-    question: "Do the rooms have coffee makers?",
-    answer: "Coffee makers are available at the front desk."
-  },
-  {
-    question: "Does the hotel have Wi-Fi?",
-    answer: "Yes. Alpine Lodge offers free Wi-Fi for guests."
-  },
-  {
-    question: "What type of activities are available on site and in the area?",
-    answer:
-      "Area activities include skiing, hiking, biking, golf, fishing, rafting, canoeing, and hunting."
-  },
-  {
-    question: "Do you offer rental bikes?",
-    answer:
-      "No. Blackwater Bikes is directly across the street and offers a broad variety of bikes for rent."
-  },
-  {
-    question: "Do you offer rental ski equipment?",
-    answer:
-      "No. Driftland Ski Shop is about 1/8 mile from the hotel, and both Canaan Valley and Timberline Mountain have rentals available."
-  },
-  {
-    question: "Is breakfast included?",
-    answer: "Breakfast is not included at this time."
-  },
-  {
-    question: "Do you have tour guides that you recommend?",
-    answer: "The front desk has a variety of local guides they can recommend."
-  },
-  {
-    question: "What restaurants in the area do you recommend?",
-    answer:
-      "The front desk keeps current local restaurant recommendations and can help point you toward nearby options."
-  },
-  {
-    question: "Can I get an early check-in?",
-    answer:
-      "Alpine Lodge tries to accommodate early check-in requests when possible. Availability depends on the day of the week and current occupancy."
-  },
-  {
-    question: "What are check-in and check-out times?",
-    answer: "Check-in is at 4:00pm and check-out is at 11am."
-  },
-  {
-    question: "Do you provide maps for hiking in the area?",
-    answer:
-      "Maps are available at the office. Alpine Lodge also recommends using hiking apps and checking current conditions before you go."
-  },
-  {
-    question: "Do you allow smoking in the rooms?",
-    answer: "No. Smoking is not allowed in the rooms."
-  },
-  {
-    question: "What is your cancellation policy?",
-    answer:
-      "The cancellation policy is 24 hours, except for holiday weekends. Please confirm the current policy when booking."
-  },
-  {
-    question: "Do you offer discounts for group bookings?",
-    answer: "Yes. Please call Alpine Lodge to discuss group booking options."
+    title: "Area",
+    items: [
+      {
+        question: "What is the Alpine Lodge address?",
+        answer: "Alpine Lodge is located at 850 Sawmill Lane, Davis, WV 26260."
+      },
+      {
+        question: "Is Alpine Lodge close to Blackwater Falls?",
+        answer:
+          "Yes. Alpine Lodge is in Davis, about 5 minutes from Blackwater Falls State Park."
+      },
+      {
+        question: "How far is Alpine Lodge from the local ski areas?",
+        answer:
+          "The local ski areas are about 10 miles from Alpine Lodge. Drive times can vary with weather, traffic, and winter road conditions."
+      },
+      {
+        question: "What type of activities are available on site and in the area?",
+        answer:
+          "Area activities include skiing, hiking, biking, golf, fishing, rafting, canoeing, and hunting."
+      },
+      {
+        question: "Do you offer rental bikes?",
+        answer:
+          "No. Blackwater Bikes is directly across the street and offers a broad variety of bikes for rent."
+      },
+      {
+        question: "Do you offer rental ski equipment?",
+        answer:
+          "No. Driftland Ski Shop is about 1/8 mile from the hotel, and both Canaan Valley and Timberline Mountain have rentals available."
+      },
+      {
+        question: "Do you have tour guides that you recommend?",
+        answer: "The front desk has a variety of local guides they can recommend."
+      },
+      {
+        question: "What restaurants in the area do you recommend?",
+        answer:
+          "The front desk keeps current local restaurant recommendations and can help point you toward nearby options."
+      },
+      {
+        question: "Is the Sawmill Restaurant open?",
+        answer: "No. The Sawmill Restaurant is permanently closed."
+      },
+      {
+        question: "Do you provide maps for hiking in the area?",
+        answer:
+          "Maps are available at the office. Alpine Lodge also recommends using hiking apps and checking current conditions before you go."
+      }
+    ]
   }
 ];
+
+export const faqs = faqGroups.flatMap((group) => group.items);
 
 const homepageFaqQuestions = [
   "How do I book a room at Alpine Lodge?",
@@ -781,8 +807,24 @@ export function canonicalSiteUrl() {
   }
 }
 
+export function canonicalUrl(path = "") {
+  const origin = canonicalSiteUrl();
+  if (!path) return origin;
+  return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
+}
+
 export function formattedAddress() {
   return `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`;
+}
+
+export function mapUrl() {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(formattedAddress())}`;
+}
+
+export function phoneTelHref() {
+  const digits = site.phone.replace(/\D/g, "");
+  const withCountry = digits.length === 10 ? `1${digits}` : digits;
+  return `tel:+${withCountry}`;
 }
 
 // The root layout appends "| Alpine Lodge". Titles that already name the
@@ -794,25 +836,39 @@ export function pageTitle(title) {
   return title;
 }
 
-export function lodgingJsonLd() {
-  const addressText = `${site.address.street}, ${site.address.city}, ${site.address.state} ${site.address.postalCode}`;
+export function pageMetadata({ title, description, path, openGraph, robots }) {
+  const metadata = {
+    alternates: {
+      canonical: canonicalUrl(path)
+    }
+  };
 
+  if (title !== undefined) {
+    metadata.title = typeof title === "string" ? pageTitle(title) : title;
+  }
+  if (description !== undefined) metadata.description = description;
+  if (openGraph) metadata.openGraph = openGraph;
+  if (robots) metadata.robots = robots;
+  return metadata;
+}
+
+// Shared NAP and lodging facts. geo and numberOfRooms stay out until Jim
+// supplies them; do not copy either from a third-party listing.
+export function lodgingBusinessCore() {
   return {
-    "@context": "https://schema.org",
     "@type": ["Hotel", "LodgingBusiness", "LocalBusiness"],
-    "@id": `${site.url}/#hotel`,
+    "@id": `${canonicalSiteUrl()}/#hotel`,
     name: site.name,
-    description:
-      "Rooms from $99 on select dates in Davis, West Virginia near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music.",
-    url: site.url,
-    image: absoluteUrl("/images/alpine-lodge-exterior.jpg"),
+    url: canonicalSiteUrl(),
     telephone: site.phone,
     email: site.email,
+    image: canonicalUrl("/images/alpine-lodge-exterior.jpg"),
     priceRange: "Rooms from $99 on select dates",
     checkinTime: "16:00",
     checkoutTime: "11:00",
+    petsAllowed: "Designated pet-friendly rooms",
+    hasMap: mapUrl(),
     sameAs: site.socials.map((social) => social.href),
-    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressText)}`,
     address: {
       "@type": "PostalAddress",
       streetAddress: site.address.street,
@@ -820,7 +876,16 @@ export function lodgingJsonLd() {
       addressRegion: site.address.state,
       postalCode: site.address.postalCode,
       addressCountry: "US"
-    },
+    }
+  };
+}
+
+export function lodgingJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    ...lodgingBusinessCore(),
+    description:
+      "Rooms from $99 on select dates in Davis, West Virginia near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music.",
     makesOffer: {
       "@type": "Offer",
       name: "Rooms from $99 on select dates",

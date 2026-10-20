@@ -3,13 +3,14 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
-import { tripGuides } from "@/data/site";
+import { pageMetadata, tripGuides } from "@/data/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Davis WV Trip Guides",
   description:
-    "Davis, WV trip guides for Alpine Lodge guests, including ski weekends, rainy days, pet-friendly travel, Blackwater Falls, Thomas, Canaan Valley, and local food."
-};
+    "Davis, WV trip guides for Alpine Lodge guests, including ski weekends, rainy days, pet-friendly travel, Blackwater Falls, Thomas, Canaan Valley, and local food.",
+  path: "/trip-guides"
+});
 
 export default function TripGuidesPage() {
   return (
@@ -34,7 +35,7 @@ export default function TripGuidesPage() {
             {tripGuides.map((guide) => (
               <Link href={`/trip-guides/${guide.slug}`} key={guide.slug} className="guide-list-card">
                 <div className="guide-list-image">
-                  <Image src={guide.image} alt="" fill sizes="(max-width: 760px) 100vw, 24vw" />
+                  <Image src={guide.image} alt={guide.alt} fill sizes="(max-width: 760px) 100vw, 24vw" />
                 </div>
                 <div>
                   <p className="eyebrow">Trip guide</p>

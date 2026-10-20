@@ -55,7 +55,7 @@ OPENAI_API_KEY=
 - Confirm pet policy.
 - Confirm cancellation policy.
 - Confirm check-in/check-out.
-- Confirm Sawmill Restaurant status and hours.
+- Sawmill Restaurant is permanently closed (Jim confirmed). Do not publish hours.
 - Confirm office hours.
 - Confirm phone and email.
 - Confirm Google Business profile access.

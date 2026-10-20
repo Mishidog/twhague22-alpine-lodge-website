@@ -1,11 +1,13 @@
 import { ExternalLink } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
+import { pageMetadata } from "@/data/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Photo Credits",
   description:
-    "Photo sources and Creative Commons attribution for destination images used on the Alpine Lodge website."
-};
+    "Photo sources and Creative Commons attribution for destination images used on the Alpine Lodge website.",
+  path: "/photo-credits"
+});
 
 const credits = [
   {

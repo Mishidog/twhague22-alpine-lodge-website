@@ -4,7 +4,7 @@ import { BookingButton } from "@/components/BookingButton";
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
-import { experiences, pageTitle, site } from "@/data/site";
+import { canonicalUrl, experiences, pageMetadata } from "@/data/site";
 
 export function generateStaticParams() {
   return experiences.map((item) => ({ slug: item.slug }));
@@ -14,15 +14,16 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const item = experiences.find((experience) => experience.slug === slug);
   if (!item) return {};
-  return {
-    title: pageTitle(item.seoTitle),
+  return pageMetadata({
+    title: item.seoTitle,
     description: item.description,
+    path: `/experiences/${item.slug}`,
     openGraph: {
       title: item.seoTitle,
       description: item.description,
       images: [{ url: item.image }]
     }
-  };
+  });
 }
 
 export default async function ExperienceDetailPage({ params }) {
@@ -37,8 +38,8 @@ export default async function ExperienceDetailPage({ params }) {
     name: item.title,
     description: item.description,
     touristType: item.bestFor,
-    url: `${site.url}/experiences/${item.slug}`,
-    image: `${site.url}${item.image}`
+    url: canonicalUrl(`/experiences/${item.slug}`),
+    image: canonicalUrl(item.image)
   };
 
   return (

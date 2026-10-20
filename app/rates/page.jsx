@@ -3,13 +3,14 @@ import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
 import { rateKnowledge } from "@/data/knowledgeCatalog.mjs";
-import { site } from "@/data/site";
+import { pageMetadata, phoneTelHref, site } from "@/data/site";
 
-export const metadata = {
-  title: "Rates & Booking",
+export const metadata = pageMetadata({
+  title: "Davis WV Hotel Rates from $99 | Book Direct",
   description:
-    "Alpine Lodge rooms from $99 on select dates in Davis, WV. Check current room rates, availability, pet-friendly options, and booking details through direct Cloudbeds reservations."
-};
+    "Alpine Lodge rooms from $99 on select dates in Davis, WV. Check current room rates, availability, pet-friendly options, and booking details through direct Cloudbeds reservations.",
+  path: "/rates"
+});
 
 export default function RatesPage() {
   const faqJson = {
@@ -103,7 +104,7 @@ export default function RatesPage() {
               For pet-friendly rooms, group questions, or arrival questions, contact the lodge directly.
             </p>
             <p>
-              Phone: <a className="text-link" href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>{site.phone}</a>
+              Phone: <a className="text-link" href={phoneTelHref()}>{site.phone}</a>
               {" "} Email: <a className="text-link" href={`mailto:${site.email}`}>{site.email}</a>
             </p>
           </div>

@@ -1,13 +1,14 @@
 import { ExperienceCard } from "@/components/ExperienceCard";
 import { PageHero } from "@/components/PageHero";
 import { SectionIntro } from "@/components/SectionIntro";
-import { experiences, partnerLinks } from "@/data/site";
+import { experiences, pageMetadata, partnerLinks } from "@/data/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Things To Do Near Davis WV",
   description:
-    "Explore Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Dolly Sods, Thomas, hiking, skiing, pet-friendly trips, and low-cost Davis-area days from Alpine Lodge."
-};
+    "Explore Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Dolly Sods, Thomas, hiking, skiing, pet-friendly trips, and low-cost Davis-area days from Alpine Lodge.",
+  path: "/experiences"
+});
 
 export default function ExperiencesPage() {
   return (

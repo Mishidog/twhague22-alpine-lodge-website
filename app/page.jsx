@@ -29,18 +29,21 @@ import {
   highlights,
   homepageFaqs,
   rateSignal,
+  pageMetadata,
+  phoneTelHref,
   rooms,
   site,
   tripGuides
 } from "@/data/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: {
     absolute: "Davis WV Lodging Near Blackwater Falls & Canaan Valley | Alpine Lodge"
   },
   description:
-    "Alpine Lodge offers Davis, WV rooms from $99 on select dates near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music."
-};
+    "Alpine Lodge offers Davis, WV rooms from $99 on select dates near Blackwater Falls, Canaan Valley, Timberline Mountain, White Grass, Thomas, trails, skiing, food, and music.",
+  path: "/"
+});
 
 const activityIcons = [
   { label: "Waterfalls", icon: Trees },
@@ -409,7 +412,7 @@ export default function HomePage() {
           </p>
           <div className="hero-actions">
             <BookingButton variant="primary">Reserve Now</BookingButton>
-            <a className="button button-secondary" href={`tel:${site.phone.replace(/[^+\d]/g, "")}`}>
+            <a className="button button-secondary" href={phoneTelHref()}>
               {site.phone}
             </a>
           </div>

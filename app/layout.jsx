@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieNotice } from "@/components/CookieNotice";
 import { JsonLd } from "@/components/JsonLd";
-import { lodgingJsonLd, site } from "@/data/site";
+import { canonicalSiteUrl, lodgingJsonLd } from "@/data/site";
 import { AnalyticsGate } from "@/components/AnalyticsGate";
 
 const bodyFont = localFont({
@@ -28,7 +28,7 @@ const displayFont = localFont({
 });
 
 export const metadata = {
-  metadataBase: new URL(site.url),
+  metadataBase: new URL(canonicalSiteUrl()),
   title: {
     default: "Alpine Lodge | Davis WV Basecamp Lodging",
     template: "%s | Alpine Lodge"
@@ -39,7 +39,7 @@ export const metadata = {
     title: "Alpine Lodge | Davis, WV Basecamp Lodging",
     description:
       "Book the Davis room, then spend the trip outside near waterfalls, trails, skiing, food, and music.",
-    url: site.url,
+    url: canonicalSiteUrl(),
     siteName: "Alpine Lodge",
     images: [
       {

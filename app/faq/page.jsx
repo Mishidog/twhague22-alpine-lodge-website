@@ -1,12 +1,13 @@
 import { JsonLd } from "@/components/JsonLd";
 import { PageHero } from "@/components/PageHero";
-import { faqs } from "@/data/site";
+import { faqGroups, faqs, pageMetadata } from "@/data/site";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Davis WV Hotel FAQ: Pets, Wi-Fi & Policies",
   description:
-    "Answers about booking Alpine Lodge in Davis, WV, including pets, Wi-Fi, room amenities, check-in, ski access, Blackwater Falls, group bookings, and local planning."
-};
+    "Answers about booking Alpine Lodge in Davis, WV, including pets, Wi-Fi, room amenities, check-in, ski access, Blackwater Falls, group bookings, and local planning.",
+  path: "/faq"
+});
 
 export default function FaqPage() {
   return (
@@ -32,12 +33,17 @@ export default function FaqPage() {
         secondary="Contact The Lodge"
       />
       <section className="section">
-        <div className="container faq-list">
-          {faqs.map((faq) => (
-            <details key={faq.question}>
-              <summary>{faq.question}</summary>
-              <p>{faq.answer}</p>
-            </details>
+        <div className="container faq-groups">
+          {faqGroups.map((group) => (
+            <section key={group.title} className="faq-group" aria-labelledby={`faq-${group.title}`}>
+              <h2 id={`faq-${group.title}`}>{group.title}</h2>
+              {group.items.map((faq) => (
+                <article key={faq.question} className="faq-entry">
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </article>
+              ))}
+            </section>
           ))}
         </div>
       </section>

@@ -129,7 +129,7 @@ directly.
 
 The vendor FAQ document supplied the question list. Before final launch, confirm owner-approved answers for:
 
-- Sawmill Restaurant hours
+- Sawmill Restaurant: permanently closed (confirmed). Do not list hours or say it is temporarily closed.
 - office hours
 - irons and ironing boards
 - ice machine

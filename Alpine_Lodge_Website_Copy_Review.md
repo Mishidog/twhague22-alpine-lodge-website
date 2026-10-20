@@ -11,7 +11,7 @@ This document organizes the current website copy by where it appears on the site
 
 - **Brand:** Alpine Lodge
 - **Top strip address:** 850 Sawmill Lane, Davis, WV
-- **Top strip phone:** +1 304-259-5245
+- **Top strip phone:** 304-259-5245
 - **Navigation:** Rooms, Rates, Location, Experiences, Trip Guides, Planner, FAQ
 - **Rate badge:** Rooms from $99
 - **Rate badge note:** Book direct
@@ -1081,7 +1081,7 @@ This document organizes the current website copy by where it appears on the site
 ## FAQ Items
 
 - **How do I book a room at Alpine Lodge?:** Use the Reserve Now button on this site to book directly through the current Cloudbeds reservation system.
-- **What are the Sawmill Restaurant hours of operation?:** The Sawmill Restaurant is currently closed.
+- **Is the Sawmill Restaurant open?:** No. The Sawmill Restaurant is permanently closed.
 - **What are the Alpine Lodge office hours?:** The Alpine Lodge office is open from 3pm to 8pm.
 - **What is the Alpine Lodge address?:** Alpine Lodge is located at 850 Sawmill Lane, Davis, WV 26260.
 - **Is Alpine Lodge close to Blackwater Falls?:** Yes. Alpine Lodge is in Davis, about 5 minutes from Blackwater Falls State Park.
@@ -1125,7 +1125,7 @@ This document organizes the current website copy by where it appears on the site
 ## Contact Cards
 
 - **Address:** 850 Sawmill Lane, Davis, WV 26260
-- **Phone:** +1 304-259-5245
+- **Phone:** 304-259-5245
 - **Email:** office@alpinelodgewva.com
 
 ## Booking Note
@@ -1205,7 +1205,7 @@ Alpine Lodge also offers practical room options for contractors, crews, project 
 
 Website: https://alpinelodgewva.com
 Direct booking: https://hotels.cloudbeds.com/reservation/6qyVUk
-Phone: +1 304-259-5245
+Phone: 304-259-5245
 Email: office@alpinelodgewva.com
 Address: 850 Sawmill Lane, Davis, WV 26260
 
@@ -1479,7 +1479,7 @@ Alpine Lodge offers practical Davis, West Virginia lodging for contractors, crew
 
 Group booking options are available by phone. Call Alpine Lodge with the work dates, number of rooms, and expected length of stay to discuss current room availability and options.
 
-Phone: +1 304-259-5245
+Phone: 304-259-5245
 
 For a single room, use the direct Cloudbeds booking page to check live public rates, room types, and availability.
 
